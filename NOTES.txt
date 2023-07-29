@@ -1,0 +1,645 @@
+1. mkdir- To create a folder  
+       example - mkdir LINUX -- LINUX FOLDER NAME
+2. ls - To List all the Directory
+    A] ls -d *Reports -- Only Directories present in that path
+    B] ls -1 - It will print in Vertical
+    C] ls -t - It will print in the order they were created
+        I] ls -lt - it will print with all the content permission size created
+    D] ls -S -
+    E] ls -i -- Inode number with the files.
+    F] ls -A - To see all the files with hidden files as well
+    G] ls -a - TO see the hidden files created by system and user .
+    H] ls -F - TO see the files which are files and foler 
+         -- For Folder - at end of every folder there will be /
+         -- For File - Just a file
+       Example - file1 TestReport/ 
+   
+3. cd - To go inside a folder
+     example - cd LINUX -- we will go inside LINUX folder
+4.pwd - will provide  path and to check in which directory we are
+
+5. cd .. - we will get one step back from current drectory
+
+6. mkdir "My DOC" - To create a directory with space "" quotes are mandatory
+    a] mkdir My\ DOC - this will create a directory with space
+    b] mkdir {test, Weather, lab}Report - This will create 3 directory with adding Report at each end. 
+       example - testReport , WeatherReport
+    c] mkdir {test, Weather, lab}/Report - This will create 3 directory with adding Report at each end.
+       example - test Report, Weather Report
+    d] mkdir User{1..10} - To create 10 folders at once
+       example - user1 , User2, user3, User4 ...... User10
+       example - user1 , User2, user3, User4 ...... User10
+    e]touch User{5..8}\ name - TO create files with space 
+         Example - User5 name , User6 name , User7 name
+7. TO search a directory which we are specifying something
+    A] ls *Reports - TO list anything which has Reports as pre-fix followed by Reports
+    B] ls user? - It will list all the directory with exactly 1 character after
+it
+    C] ls User[139] - It will print this in output as it is
+       example - user1 user3 user9 will be printed as an output
+       example - user1 , User2, user3, User4 ...... User10
+8.cat > filename - to make a file and write something , we use cat > filename, whatever we write it gets stored in the filename
+   A] cat filename 1> filename2
+           - this will copy all the date from filename to filemae2
+   B] cat filename 2> filename3
+          - this will add error in the filename3
+9. cat >> filename - It will append whatever we write into file[ i.e filename] 
+
+10.cat
+
+11. cat > .myfile -- To create a hidden File
+     
+11. touch filename - to create a file
+    A] touch file1 file2 file3 - To create multiple file, we need to writetouch followed by  multiple file name
+
+12. A file or Folder created will have - Permission Number_of_link Owner Group Size Date Time Filename
+
+13. rm User{5..8}\ name - To delete multiples of same name at once 
+
+14. pwd ; ls ; cat info - To execute multiple commands in one line we use ";"
+
+15. pwd && cat info - Need info
+
+16. date - To display date on Terminal
+  A] date +%a - Short form of day
+  B] date +%A - LOng For of Day
+  C] date +%d - Only Date
+  D] date +%b - Short Form of Month
+  E] date +%B - Long form of Month
+  F] date +%m -
+  G] date +%y
+  H] date +%Y
+  I] date +%H - To see Time in 24 Hour format
+  J] date +%s - In Micro second
+  K] date +%p - AM or PM
+  M] date +&z - Convention followed
+  N] date +%Z - WHich time zone it is
+  O] date +%I - 24 hour Format
+  P] date +%S - To display Seconds
+ 
+   II] date +%H:%M:%S
+  III] date +%H:%M:%S" "%Z
+   IV] date +%I:%M:%S" "%p" "%Z 
+
+17. cal - To see calender
+
+   D] cal -A 3 - 
+   E] cal -B 3
+   F] cal -j 2022 - calender in julien
+   G]ncal - In row way [ sat sun in left side ]
+   H] ncal -w - In 
+
+18. cat -s file - It will print with only one spaces
+   A] cat -n file - It will print with LINE NUMBER
+   B]cat -b file - Give line number only for data and ignore blank lines
+ 
+19. sort filename - To Print data inside a file in A Alphabetical Order
+   A] sort -r filename - To print data in Reverse Alphabetical order
+   B] sort -M months - If data inside the file are months then it will sort in Month order
+   C] sort -c file - file is in sorted format or not
+   D] sort -n file - It will sort in numerical order
+   E] sort -rn file - It will sort in reverse numerical order
+
+20. Slice or to print specific as per our need
+   A] cut -c5 filename 
+   B] cut -c3-5 filename - it will print 3rd , 4th and 5th character
+   C] cut -c3- filename - it will print 3rd 4th 5th 6th character
+   D] cut -c1,3,5 filname - it will print obly mentioned character not range
+
+21 . wc -l file - To count number of lines
+     wc -w - no. of words 
+     wc -c - no. of words
+
+22. uniq file - duplicte words  won't print 
+    uniq -c file -- how many times same word is in file
+    uniq -d file -- repeated words will print
+    uniq -i file - won't print same word caps or non-caps
+    uniq -u file - non-repeated 
+    uniq 
+23. sort -o file file - sort data and save in same file
+
+24. comm file file1 - to compare [ if files are sorted then only comm command will work ]
+     first column - unique data of 1st file
+     second column - uniq data of 2nd file
+     3rd column - common data of both files
+
+    A] comm -1 file file1 - ignores 1st column
+    B] comm -2 file file1 - ignores 2nd column
+    C] comm -3 file file1 - ignores 3rd column
+25. How to use Delimiter's
+    cat > emp
+      123#Sam#Mumabi#52661
+      124#Kat#Chennai#52661
+      125#Jon#Pune#52661
+      126#Snow#Delhi#52661
+      127#Mike#bangalore#52661
+    
+    sort -t'#' -k1 emp
+       -- k1 that means sort will happen according to column1
+    sort -t'#' -k2 emp
+       -- K2 means sort will happen according to column2
+
+   To print specific data: - 
+    cut -d'#' -f2 emp
+        -- 
+ 
+    cut -d'#' -f2,4 emp
+
+    cut -d'#' -f2-4 emp
+
+26.Permission
+  - r - read - 4
+  - w - write - 2
+  - e - execute - 1
+
+Form 
+     u  g o
+   -rw-rw-r--  it  is chmod 664
+       -- u - user
+       -- g - group
+       -- o - other
+
+27 gzip linux - convert directory to zip file
+
+28. gunzip linux.gz - convert zip file to normal
+
+29. tar -cf ../Backup/labReport.tar LabArchive
+      --cf - for creating a tar file
+      --../Backup/labReport.tar - We are creating tar inside this directory [ Destination]
+      -- LabArchive - which we are making tar [Source]
+
+30. tar -tf labReport.tar - To list out everything inside a tar file    
+    -- tf -- to list tar file
+
+31. kill %1 -- To kill all jobs whichever running in background                            
+
+32. sed - to replace , to print 
+
+    A] sed -n '5,10p' filename  -- Line number 5 to 10 will be in output
+  
+    B] sed '5,10d' filename - If we don't want line number 5 to 10 should not be printed, this is the command for that
+
+    C] sed 's/Unix/LINUX/' Filename
+          -- Unix - already present in file
+          -- LINUX - word which we want to replace with UNIX with, ile UNIX replace with LINUX
+   
+    D] sed '10,20 s/Unix/LINUX/' Filename
+         -- 10, 20 -- Specifying only between line number 10 and 20 replace UNIX with LINUX
+
+33.
+a] To replace
+tr 'g' 'b' < myfile
+  - - g will be replace with b inside myfile
+
+b]
+tr -d '[:space:]' < myfile
+   - no space everything will be output in one line
+c]
+tr -d '[:blank:]' < myfile
+   - blank line will delete
+
+D]tr -d 'g' 'b' <file >newfile
+   - it will replace and then append the changes in newfile
+
+e] tr -d 'A-Za-z' <file >newfile
+     -all alphabet letters will be removed
+
+f] tr '[:lower:]' '[:upper:]'  < file
+     - it will change all lower to upper letters
+       or
+    tr 'a-z' 'A-Z' <file
+       - it will do the same like above  
+
+
+34. To print two files data in output
+     cat emp - empcopy
+        press ctrl + D after entering the command then 2nd files data will come in output
+      
+35.  mv file1 file2 - adding all the data of file1 to file2 and replace the data of exist                               
+
+
+36. more filename -- data of file will open and we need to press enter then next part of file data will open
+
+37. head - To see first rows
+    A] head -10 filename
+         - first 10 rows 
+    B] head -c10 filename
+         - first 10 characters
+     
+
+
+38. tail - to see last rows
+    A] tail -10 filename
+          - last 10 rows
+    B] tail -c10 filename
+          - last 10 characters
+
+39. head -10 filename | tail -10 filename -- This displays first 10 rows and last 10 rows
+
+
+40. Cappital A - to move to last line 
+
+
+41. Esc + shift+: - then 
+     - 1. :%s/findword/replaceword/
+    
+     - 2. :5,10s/findword/replaceword/
+             -- It will find and replace the word only in between 5 to 10
+
+42. Inside a file : - 
+    A] ctrl d- foward
+    B] ctrl u- backward
+    C] dw- deletes a word before the cursor
+    D] dd - deletes a lines
+         --4 Times dd - will delete 4 lines 
+    E]yy- copy the line
+         -- 5 Times yy - copies 5 lines
+    F]p- paste the line above cursor
+    G] capital P- below the cursor
+    H] ?Unix- finds the word Unix
+
+
+
+:10- moves to 10th line 
+
+
+
+43. find -name '*.txt' - to search in current directory
+    find / -name '*.txt' - to search in root
+    find /Desktop -name '*.txt' - to search in desktop  
+
+44. To make a shell script
+    
+  A]To make a file for scripting 
+    vi script_demo.sh
+         -- inside a file
+         pwd
+         date
+       save this 
+  
+   B] To Run: -
+       sh script_demo.sh
+   
+     We will get an output
+        - for pwd - current path
+        - for date - date of today's
+45. For Shell Scripting
+
+     A] Arithmetic Operator
+         I] + , -, \* [ for sh] , * [ for bash], /, %
+
+     B] Relational Operator
+           sh[ Shell ]     Bash
+           -gt              >
+           -lt              <
+           -ge              >=
+           -le              <=
+           -eq              ==
+           -ne              !=
+
+     C]Logical Operator
+           sh[Shel]     Bash
+           -a            &&
+           -o            ||
+
+     D] How to add two variable
+    
+        I] Bourne Shell
+           -- a = 10
+              b = 20 
+             sum = `expr $a +$b`
+        II] Bash Shell
+           -- a = 10 
+              b = 20
+             sum = $((a + b))
+                or
+              (( sum = a + b ))
+      E] How to muliply
+         !] Bourne Shell
+           -- a = 10
+           -- b = 20 
+           -- sum `exp $a \* $b`
+ 
+         II] bash Shell
+           -- a = 10
+           -- b = 20
+           --  (( prod = a * b))
+
+      E] TO print anything
+          - echo 
+
+      example - echo "Sum of $a and $b is $sum"
+
+      F] To give input after running a script
+         
+         I]One variable in one line 
+             -- read variable_name
+             example - read a 
+         II]Two variable in same line
+           -- read variable_name variable_name1
+             example - read a b
+       
+      G] Control Statement
+         if
+         else
+         elif [ for else if]
+
+         then [ begin ] 
+         fi   [ end ]
+ 
+      Example: - 
+         Bourne Shell
+         if [ condition ]
+         then
+            statement
+         fi
+
+        Bash shell
+          if (( condition  ))
+          then
+            statement
+          fi
+
+
+ 46] Creating a script with control statement
+
+  A] 
+    echo "Enter name and Age"
+    read name age
+    
+    if [$age -ge 18 ]  \\ in place of -ge we can use '>' 
+    then
+       echo "$name is elgible for voting"
+    else
+       echp "$name is not eligible for voting"
+    fi
+
+  B]
+    echo "Enter name and age"
+    read name age
+
+    if [ $age -ge 18 -a $age -le 80 ]
+    then
+       echo "$name is eligible for voting"
+    elif [ $age -gt 80 ]
+    then
+       echo "$naem is eligible for voting but stay at home"
+    elif [ $age -lt 1 ]
+    then
+       echo "Invalid age.."
+    else
+       echo "$name is not elibile for voting"
+    fi
+
+  -----BASH SHELL-----
+
+    echo "Enter name and age"
+    read name age
+
+    if (( age >= 18 && age <= 80 ))
+    then
+       echo "$name is eligible for voting"
+    elif (( age > 80 ))
+    then
+       echo "$naem is eligible for voting but stay at home"
+    elif (( age < 1 ))
+    then
+       echo "Invalid age.."
+    else
+       echo "$name is not elibile for voting"
+    fi
+
+  C]
+  
+   echo "Enter a file or Directory"
+   read val
+
+   if[ -d $val ]
+   then
+      cd $val
+      pwd
+   elif [ -f $val ]
+   then
+        if [ -r $val ]
+        then
+            cat $val
+        else
+           echo "$val is not readable file"
+        fi
+   else 
+      echo "$val : no such file or directory"
+   fi
+
+   USEFUL COMMANDS: -
+
+      -d -> return true , if given input is directory
+      -f -> return true, if given input is file
+      -L -> return true, if given input is symbolic/ soft line
+      -r ->  return true, if given input is file/directory is readable
+      -w -> return true, if given input is file/directory is writable
+      -x -> return true, if given input is file/directory executable
+
+47] FOR LOOP IN A SHELL SCRIPT
+
+     list = `ls`
+      
+       A] Type 1
+           timestamp = `date` 
+           echo $timestamp
+           OUTPUT: -
+          Date will be printed
+        
+       B] Type 2
+          path $(pwd)
+          echo $path
+          OUTPUT:- 
+            path will be printed
+
+     Method1:
+     for variable in value1, value2, value3
+     do
+        statement
+     done
+
+     Method2:
+     for variable in `seq start step stop `
+     do
+       statement
+     done
+ 
+      Method3: for in seq is a keyword , start step stop are variable 
+      for variable in $(seq start step stop)
+      do
+        statement
+      done   
+    
+      Method4: [works only in ksh]
+      for variable in {start..stop.step}
+      do
+        statement
+      done
+     
+      Method5: bash
+      for (( initialization ; condition ; increment ))
+      do
+        statement
+      done
+
+
+ 
+48] While Loop
+
+   while [ condition ]
+   do
+     statement
+   done
+     -----or-----
+   while test condition
+   do
+     statement
+   done 
+
+49] until loop
+
+   until [ condition ]
+   do
+     statement
+   done
+     -----or-----
+   until test condition
+   do
+     statement
+   done
+  
+
+50] while in script
+
+
+   read n
+   iterate=1
+   while [ $iterate -le $n ]
+   do
+     echo $iterate
+     iterate=`expr $iterate + 1`  or ((itr++)) [ bash type ] -use only one
+
+   B}
+
+   read n
+   iterate=1
+   while [ $iterate -le $n ]
+   do
+     if [ $iterate -eq 5  ];then
+          iterate=`expr $iterate +1`
+          continue
+     fi
+       echo $iterate
+       iterate=`expr $iterate + 1`  or ((itr++)) [ bash type ] -use only one
+     done
+
+51] function in script
+
+   FUNCTIONS:
+   fun() {
+   read a b
+   sum = a + b
+   }
+
+
+
+52]
+
+    awk -F'#' '{print NR" " $0}' filename
+
+   awk -F'#' '{print NR}' filename 
+
+    awk -F'#' 'END{print"There are " NR " records"}' filename  
+
+     awk -F'#' '{print NF}' filename
+
+
+     awk -F'#' 'END{print NR}' filename
+
+  
+   cat > myemp
+
+   123 samuel
+   124 hghgh hh
+   125
+   126 fgftf vhh ghgh 8878
+
+
+    A]awk '{print NF}' filename
+
+   B] awk '{print NF}' myemp
+     output
+     2
+     3
+     1
+     4
+
+   C] awk '{print "In Records "NR" we have "NF" fields"}' myemp
+     OUTPUT
+        NR - Number of records and NF Number of fields
+     In Records 1 we have 2 fields
+     In Records 2 we have 3 fields
+     In Records 3 we have 1 fields
+     In Records 4 we have 4 fields
+
+  &&] Creating a file emp and adding content
+      cat> emp
+      123#Samuel#Chennai#97864
+      125#Edison#Bengaluru#89765
+      124#Sugan#Chennai#98765
+      126#Jordan#Delhi#897867
+      127#Blesson#Mumbai#998877
+
+      A] awk -F'#' '$4 > 85000 {print}' emp
+        OUTPUT: -
+
+         126#Jordan#Delhi#897867
+         127#Blesson##Mumbai#998877
+
+      B]  awk -F'#' '$3 == 'Chennai' {print}' emp
+
+        123#Samuel#Chennai#97864
+        124#Sugan#Chennai#98765
+
+      C] awk -F'#' 'NR%2 ==0 {print}' emp
+     
+        125#Edison#Bengaluru#89765
+        126#Jordan#Delhi#897867
+
+      D] awk '{sub("Chennai", "CHN");print)}' emp
+       OUTPUT: - replacing chennai with CHN
+        123#Samuel#CHN#97864
+      125#Edison#Bengaluru#89765
+      124#Sugan#CHN#98765
+      126#Jordan#Delhi#897867
+      127#Blesson#Mumbai#998877  
+
+   E] awk -F'#' '{$3=""; print}' emp
+ 
+      123 Samuel 97864
+      125 Edison 89765
+      124 Sugan  98765
+      126 Jordan 897867
+      127 Blesson 998877 
+
+  F] awk -F'#' '{printf("%6d %-10s %-10s %10d\n", $1,$2,$3,$4)}' emp
+      OUTPUT: - Right Alignment:wq!
+
+      123 Samuel Chennai 97864
+      125 Edison Bengaluru 89765
+      124 Sugan Chennai 98765
+      126 Jordan Delhi 897867
+      127 Blesson Mumbai 998877 
+
+
+Integer --> %d
+Float --> %f
+String --> %s
+
+Right Alignment --> +ve value
+Left Alignment --> -ve value
+
+
