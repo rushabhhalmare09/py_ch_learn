@@ -1,0 +1,66 @@
+Types of Statistics: -  
+1.	Descriptive and 
+2.	Inferential Statistics
+
+Descriptive Statistics: -
+Descriptive statistics focuses on describing and summarizing the data at hand. After asking four friends how they get to work, we can see that 50% of them drive to work, 25% ride the bus, and 25% bike. These are examples of descriptive statistics. 
+
+Inferential Statistics: -
+Inferential statistics uses the data at hand, which is called sample data, to make inferences about a larger population. We could use inferential statistics to figure out what percent of people drive to work based on our sample data.
+Types of data: -
+1.	Numeric or quantitative data
+2.	Categorical or qualitative data
+
+NOTE - It's important to note that these aren't the only two types of data that exist - there are others too.
+
+Numeric or Quantitative data: -
+-	It is is made up of numeric values. 
+
+Numeric data can be: - 
+1.	Continuous Data (Measured)
+2.	Discrete Data (Countable)
+
+1.	Continuous Data (Measured):- Continuous numeric data is often quantities that can be measured, like speed or time.
+
+2.	Discrete Data (Countable): - Discrete numeric data is usually count data, like number of pets or number of packages shipped.
+Categorical or Qualitative data
+-	It is made up of values that belong to distinct groups.
+
+Categorical data can be: - 
+1.	Nominal Categorical Data (Unordered)
+2.	 Ordinal Categorical Data (Ordered)
+
+1.	Nominal Categorical Data (Unordered) : - Nominal categorical data is made up of categories with no inherent ordering, like marriage status or country of residence. 
+
+2.	Ordinal Categorical Data (Ordered): - Ordinal categorical data has an inherent order, like a survey question where you need to indicate the degree to which you agree with a statement.
+Sometimes, Categorical data can be expressed in numeric form (Ex – disagree(1), agree(2), strongly agree (3) ) but still that won’t be considered as numeric data. Check below image.
+
+Measures of center
+There are three different measures of center: - 
+   1] Mean, 
+   2] Median and 
+   3] Mode
+
+1] Mean : - 
+Mean is often called as Average, it is very common ways of summarizing data. To calculate mean, we add up all the numbers of interest and divide by the total number of data points, which is 83 here. This gives us 10.43 hours of sleep.
+
+2] Median: - 
+The median is the value where 50% of the data is lower than it, and 50% of the data is higher. We can calculate this by sorting all the data points and taking the middle one, which would be index 41 in this case. This gives us a median of 10.1 hours of sleep. In Python, we can use np.median to do the calculations for us. Mode is often used for categorical variables, since categorical variables can be unordered and often don't have an inherent numerical representation.
+
+In below image, if we are not using np.median, then we can first sort the column using .sort_values() then use .iloc[index_number] to get the required output.
+
+3] Mode: - 
+The mode is the most frequent value in the data. If we count how many occurrences there are of each sleep_total and sort in descending order, there are 4 mammals that sleep for 12.5 hours, so this is the mode. The mode of the vore variable, which indicates the animal's diet, is herbivore. We can also find the mode using the mode function from the statistics module. Mode is often used for categorical variables, since categorical variables can be unordered and often don't have an inherent numerical representation.
+
+We can do this using two methods as show in figure: - 
+1] using .value_counts()
+   OR
+2] using 
+     import statistics as stat
+     stat.mode(df[‘column_name’])
+
+Skewed: - 
+        If data is not skewed that is not symmetrical, we should use median instead of mean. As, if data is skewed then mean and median are different.
+The mean is pulled in the direction of the skew, so it's lower than median on left-skewed data, and higher than the median on the right-skewed data. Because the mean is pulled around by the extreme values, it's better to use the median since it's less affected by outliers.
+      
+
