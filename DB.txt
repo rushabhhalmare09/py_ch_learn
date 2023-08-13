@@ -26,3 +26,42 @@ SAVEPOINT: Set a point in a transaction to which you can later roll back.
 
 5] Data Query Language (DQL):
 SELECT: Retrieve data from a database table.
+
+
+========xx=====
+
+1. Mathematics:
+ • 3Blue1Brown: Captivating visualizations for complex math concepts.
+ • ProfRobBob: Clear explanations and examples for learners.
+ • Ghrist Math: Advanced math in a practical context.
+
+2. SQL:
+ • Joey Blue: From basic queries to advanced database management.
+ • The Magic SQL: Engaging and user-friendly SQL tutorials.
+
+3. MS Excel:
+ • ExcellsFun: Tips, tricks, and functions for Excel.
+ • TutorialsPoint: Basic to advanced Excel skills.
+
+4. Python:
+ • Corey Schafer: Comprehensive Python tutorials for data analysis.
+
+5. Power BI:
+ • Guy in a Cube: Insights and tips for Power BI.
+ • Learnit Training: In-depth Power BI tutorials.
+
+6. Tableau:
+ • Tableau Tim: Tableau tutorials from scratch to advanced.
+ • Abhishek Agarrwal: Practical Tableau tips and examples.
+
+7. R Programming:
+ • R Programming 101: Fundamentals and beyond in R programming.
+ • EquitableEquations: R for data analysis and visualization.
+
+8. Machine Learning:
+ • Sentdex: Machine learning tutorials and projects.
+ • DeeplearningAI: Deep learning concepts and applications.
+ • StatQuest: Simplified statistics and ML algorithms.
+
+9. Data Analysis:
+ • AlexTheAnalyst: Enhance your analytical skills.
