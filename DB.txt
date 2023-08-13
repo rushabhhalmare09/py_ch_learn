@@ -1,0 +1,28 @@
+1] Data Definition Language (DDL):
+CREATE: Create a new database, table, or view.
+ALTER: Modify the structure of an existing database, table, or view.
+DROP: Delete an existing database, table, or view.
+RENAME: Rename an existing table or view.
+INSERT: Add new rows into a table.
+UPDATE: Modify existing rows in a table.
+DELETE: Remove rows from a table.
+MERGE: Perform insert, update, or delete operations based on a condition.
+TRUNCATE: Remove all rows from a table, but retain the table structure.
+
+2] Data Manipulation Language (DML):
+INSERT: Add new rows into a table.
+UPDATE: Modify existing rows in a table.
+DELETE: Remove rows from a table.
+MERGE: Perform insert, update, or delete operations based on a condition.
+
+3] Data Control Language (DCL):
+GRANT: Provide user access permissions to specific database objects.
+REVOKE: Revoke user access permissions from specific database objects.
+
+4] Transaction Control Language (TCL):
+COMMIT: Save changes made during a transaction permanently.
+ROLLBACK: Undo changes made during a transaction.
+SAVEPOINT: Set a point in a transaction to which you can later roll back.
+
+5] Data Query Language (DQL):
+SELECT: Retrieve data from a database table.
