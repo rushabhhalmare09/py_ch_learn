@@ -67,3 +67,16 @@ NOTE: ->
 •	unorder (Ordereddict is ordered)
 
 
+Abstract Class: - 
+
+•	An abstract class can be considered as a blueprint for other classes. 
+•	Abstract classes are classes that contain one or more abstract methods. 
+•	An abstract method is a method that has a declaration but does not have an implementation. 
+•	This set of methods must be created within any child classes which inherit from the abstract class. 
+•	A class that contains one or more abstract methods is called an abstract class. 
+•	Abstract class be default is not present in python but it can be implemented using abc module which helps in importing abstract classes.
+
+In my words: -
+Basically, we have a parent class and we want to make it available to others and to be used by other developers as well and they could enhance further as per requirement.
+But doing so, it would become very messy as variety of developer could be implementing it in various forms, so here Abstract methods classes comes into the picture.
+This Abstract methods classes acts as a blueprint which imposes certain methods to be always part of the classes whomever using it. 
