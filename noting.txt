@@ -1,0 +1,69 @@
+Tuples: -
+•	Tuples are immutable. i.e like strings, tuples are immutable. Once Python has created a tuple in memory, it cannot be changed.
+•	A tuple lets us “chunk” together related information and use it as a single thing.
+•	Tuples are accessible like lists.
+•	Tuples are created using Square Brackets i.e “ ( ) ” . Ex  a = (5, 4)
+•	Although it is not necessary, it is conventional to enclose tuples in parentheses so, this is valid as well: Ex  a = 1, 2, 3, 4, 5
+•	tuple packing   b = ("Bob", 19, "CS")  | tuple unpacking  (name, age, studies) = b
+•	The tuple can be heterogenous as well - for ex  it can have string, int, list. Ex  a = 1, 2, 3, range(4), 6
+NOTE - if it has a list, it can’t be hashed because one element - the list, is mutable
+•	Tuples are hashable - they can be passed to hash() which is a function from the __builtin__ module. This is because they are non-mutable. Use it like this : print __builtins__.hash(tup)
+ How to add items to tuples from lists etc
+b = [1, 2, 3]
+temp = ()
+lis = list(temp)
+for x in b:
+   lis.append(int(x))
+tup = tuple(lis)
+print __builtins__.hash(tup)
+
+Sets: -
+•	Sets are unordered bag of unique values. A single set contains values of any immutable data type.
+•	A set can't store immutable data type. so, s = {1, 2, 3, range(10)} is not allowed. 
+•	Sets are created using Curly Brackets i.e “ { } ” . Ex  myset = {1, 2}
+•	Sets can be updated, so they aren’t hashable.
+•	If the values in a list are all of integer type, use the map() to convert all the strings to integers.
+•	SETS ARE GENERALLY USED FOR MEMBERSHIP TESTING AND DUPLICATE ENTRIES ELIMINATING
+
+•	REMOVE() - IF ELEMENT NOT PRESENT IN SET, RAISE ERROR
+•	DISCARD() - IF ELEMENT NOT PRESENT, DO NOT RAISE ERROR
+•	POP() - RETURNS A RANDOM VALUE - BCOZ SETS ARE UNORDERED
+•	CLEAR() - REMOVES ALL VALUES FROM THE SET
+•	41. COMMON SET OPERATIONS:
+•	'A' IN A_SET - RETURNS BOOLEAN - TRUE/FALSE
+•	A_SET.UNION/INTERSECTION/DIFFERENCE/SYMMETRIC_DIFFERENCE(B_SET)
+•	UNION - RETURNS A NEW SET HAVING ALL ELEMENTS OF BOTH A AND B
+•	INTERSECTION - BOTH SETS
+•	DIFFERENCE - IN A BUT NOT IN B : A-B - NOT A SYMMETRIC OPERATION
+•	SYMMETRIC_DIFFERENCE - ONLY ONCE IN EITHER A OR B
+
+Operations on Sets: - 
+1] Creating a Set  myset = set()
+2] Modifying ITEMS   add() and update()
+3] REMOVING ITEMS   discard() and remove()
+4] COMMON SET OPERATIONS - union(), intersection() and difference()
+             union()  .union() operator returns the union of set and the set of elements in an iterable. Sometimes '|' operator is used in place of .union() operator but it operates only on the
+set of elements in set. 
+                   Ex  s.union( "Rank" )   or   s | set("Rank")
+            intersection()  .intersection() operator returns the intersection of set and the set of elements in an iterable. Sometimes '&' operator is used in place of .intersection() operator but it operates only on the set of elements in set. Set is immutable to .intersection() operation (or '&' operation).
+
+            difference()  .difference() returns a set with all elements from set that are not in an iterable. Sometimes '-' operator is used in place of .difference() operator but it operates only on
+the set of elements in set. Set is immutable to .difference() operation (or '-' operation).
+
+
+NOTE: -> 
+     union() and intersection() are symmetric methods i.e. to say,
+        a.union(b) == b.union(a)
+        True
+        a.intersection(b) == b.intersection(a)
+        True
+        a.difference(b) == b.difference(a)
+        False
+
+•	Lists - mutable - can contain mutable datatypes - can't be hashed - ordered
+•	Tuples - immutable - can contain mutable datatypes - can be hashed if they contain no mutable datatype -
+•	sets - mutable - cannot contain mutable datatype - cannot be hashed - unordered
+•	dictionary- mutable - can contain mutable datatypes(not as keys but) - can't be hashed -
+•	unorder (Ordereddict is ordered)
+
+
