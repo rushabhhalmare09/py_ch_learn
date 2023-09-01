@@ -76,7 +76,31 @@ Abstract Class: -
 •	A class that contains one or more abstract methods is called an abstract class. 
 •	Abstract class be default is not present in python but it can be implemented using abc module which helps in importing abstract classes.
 
+
+
+Stack: - 
+
 In my words: -
 Basically, we have a parent class and we want to make it available to others and to be used by other developers as well and they could enhance further as per requirement.
 But doing so, it would become very messy as variety of developer could be implementing it in various forms, so here Abstract methods classes comes into the picture.
 This Abstract methods classes acts as a blueprint which imposes certain methods to be always part of the classes whomever using it. 
+
+Main stack operations
+• ​Push (int data): Insert data onto the stack.
+•​ int Pop(): Removes and returns the last inserted element from the stack.
+Auxiliary stack operations
+• ​int Top(): Returns the last inserted element without removing it.
+• ​int Size(): Returns the number of elements stored in the stack.
+• ​int IsEmptyStack(): Indicates whether any elements are stored in the stack or
+not.
+• ​int IsFullStack(): Indicates whether the stack is full or not.
+
+
+Inbuilt Stack in Python
+● The ​queue​ module also has a ​LIFO Queue​, which is basically a​ Stack​.
+There are various functions available in this module:
+● maxsize ​– Returns the maximum number of items allowed in the stack.
+● empty()​ – Returns ​True​ if the stack is empty, otherwise it returns​ False​.
+● get()​ – Remove and return an item from the stack.
+● put(item)​ – Put an item into the stack.
+● qsize()​ – Return the number of items currently present in the stack.
