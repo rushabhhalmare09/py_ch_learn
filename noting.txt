@@ -104,3 +104,38 @@ There are various functions available in this module:
 ● get()​ – Remove and return an item from the stack.
 ● put(item)​ – Put an item into the stack.
 ● qsize()​ – Return the number of items currently present in the stack.
+
+
+
+Problem Statement- Balanced Parenthesis
+For a given string expression containing only round brackets or parentheses, check
+if they are balanced or not. Brackets are said to be balanced if the bracket which
+opens last, closes first. You need to return a boolean value indicating whether the
+expression is balanced or not.
+Approach:
+● We will use stacks.
+● Each time, when an open parenthesis is encountered push it in the stack, and
+when closed parenthesis is encountered, match it with the top of the stack
+and pop it.
+● If the stack is empty at the end, return Balanced otherwise, Unbalanced.
+Python Code:
+7
+open = ["[","{","("]
+close = ["]","}",")"]
+# Function to check parentheses
+def checkBalanced(inputStr):
+ s = [] #The stack
+ for i in inputStr:
+ if i in open:
+ s.append(i)
+ elif i in close:
+ position = close.index(i)
+ if ((len(s)>0) and (open[position]==s[len(s)-1])):
+ s.pop()
+ else:
+ return "Unbalanced"
+ if len(s) == 0:
+ return "Balanced"
+ else:
+ return "Unbalanced"
+
