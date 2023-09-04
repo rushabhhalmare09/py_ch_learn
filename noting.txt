@@ -105,7 +105,78 @@ There are various functions available in this module:
 ● put(item)​ – Put an item into the stack.
 ● qsize()​ – Return the number of items currently present in the stack.
 
+Exceptions
+● Attempting the execution of an operation may sometimes cause an error
+condition, called an exception.
+● Exceptions are said to be “thrown” by an operation that cannot be executed.
+● Attempting the execution of pop() on an empty stack throws an exception
+called ​Stack Underflow​.
+● Trying to push an element in a full-stack throws an exception called ​Stack
+Overflow​.
 
+Limitations of Simple Array Implementation
+In other programming languages like C++, Java, etc, the maximum size of the an
+array must first be defined i.e. it is fixed and it cannot be changed. However, in
+Python, arrays are resizable by nature. This means that even though Python
+internally handles the resizing of arrays, it is still very expensive.
+4
+class Stack:
+ #Constructor
+ def __init__(self):
+ self.stack = list()
+ self.maxSize = 8 #Maximum size of the list
+ self.top = 0 #Top element
+ #Adds element to the Stack
+ def push(self,data):
+ if self.top>=self.maxSize:#Stack Overflow
+ return ("Stack Full!")
+ self.stack[top]= data #Assign the new element at 'top'
+ self.top += 1 #Increment top
+ return True
+ #Removes element from the stack
+ def pop(self):
+ if self.top<=0:#Stack Underflow
+ return ("Stack Empty!")
+ item = self.stack[top-1]#Topmost element
+ self.top -= 1 #Simply decrementing top
+ return item #Returning the removed element
+ #Size of the stack
+ def size(self):
+ return self.top
+Stack using Linked Lists
+Till now we have learned how to implement a stack using arrays, but as discussed
+earlier, we can also create a stack with the help of linked lists. All the five functions
+that stacks can perform could be made using linked lists:
+5
+class Node:#Node of a Linked List
+ def __init__(self, data):
+ self.data = data
+ self.next = None
+class Stack:#Stack Implementation using LL
+ def __init__(self):
+ self.head = None
+ def push(self, data):
+ if self.head is None:
+ self.head = Node(data)
+ else:
+ new_node = Node(data)
+ new_node.next = self.head
+ self.head = new_node
+ def pop(self):
+ if self.head is None:
+ return None
+ else:
+ popped = self.head.data
+ self.head = self.head.next
+ return popped
+Inbuilt Stack in Python
+● The ​queue​ module also has a ​LIFO Queue​, which is basically a​ Stack​.
+There are various functions available in this module:
+● maxsize ​– Returns the maximum number of items allowed in the stack.
+● empty()​ – Returns ​True​ if the stack is empty, otherwise it returns​ False​.
+● get()​ – Remove and return an item from the stack.
+● put(item)​ – Put an item into the stack.
+● qsize()​ – Return the number of items currently present in the stack.
 
 Problem Statement- Balanced Parenthesis
 For a given string expression containing only round brackets or parentheses, check
