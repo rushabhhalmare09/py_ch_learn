@@ -210,3 +210,71 @@ def checkBalanced(inputStr):
  else:
  return "Unbalanced"
 
+
+============================
+
+Queue using Python List
+List is Python’s built-in data structure that can be used as a queue. Instead of
+enqueue() and ​dequeue(), ​append() and ​pop() function is used.
+Output:
+5
+#Inbuilt implementation of Queue using List
+queue = []
+# Adding elements to the queue
+queue.append('1')#Using the .append() function
+queue.append('2')
+queue.append('3')
+print("Initial Queue:")
+print(queue)#Queue after appending the elements
+# Removing elements from the queue
+print("\nElements dequeued from queue:")
+print(queue.pop(0))#Removing first element from queue
+print(queue.pop(0))
+print(queue.pop(0))
+print("\nQueue after removing elements:")
+print(queue)
+Initial queue:
+['1', '2', '3']
+Elements dequeued from queue:
+1
+2
+3
+Queue after removing elements:
+[]
+In-built Queue in Python
+● Queue​ is built-in module of Python which is used to implement a queue.
+● queue.Queue(maxsize) initializes a variable to a maximum size of maxsize.
+● This Queue follows the ​FIFO​ rule.
+There are various functions available in this module:
+● maxsize ​– Returns the maximum number of items allowed in the
+queue.
+● empty()​ – Returns ​True​ if the queue is empty, otherwise it returns
+False​.
+● get()​ – Remove and return an item from the queue.
+● put(item)​ – Put an item into the queue.
+● qsize()​ – Return the number of items currently present in the queue.
+Note: ​A max size of zero ‘0’ means an infinite queue.
+6
+from queue import Queue
+q = Queue(maxsize = 3) # Initializing a queue
+print(q.maxsize())# Maximum size of the Queue
+q.put('14') # Adding elements to the queue
+q.put('28')
+q.put('36')
+print("\nisFull: ", q.full()) # Check if the queue is full
+print("\nElement dequeued from the queue: ")
+print(q.get()) # Removing an element from queue
+print("\nisEmpty: ", q.empty()) # Check if the queue is empty
+We get the following output:
+Practice problems:
+7
+3
+isFull: True
+Element dequeued from the queue:
+14 # A queue follows FIFO
+isEmpty: False
+● https://www.spoj.com/problems/ADAQUEUE/
+● https://www.hackerearth.com/practice/data-structures/queues/basics-of-queues/
+practice-problems/algorithm/number-recovery-0b988eb2/
+● https://www.codechef.com/problems/SAVJEW
+● https://www.hackerrank.com/challenges/down-to-zero-ii/problem
