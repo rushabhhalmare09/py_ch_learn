@@ -348,3 +348,109 @@ return ans + N #Solving problem from result in previous step
 3. The code is still not complete. The missing part is the base case. Now we will
 dry run to find the case where the recursion needs to stop.
 
+
+---
+Working of recursion
+We can define the steps of the recursive approach by summarizing the above three
+steps:
+● Base case: A recursive function must have a terminating condition at which
+the process will stop calling itself. Such a case is known as the base case. In
+the absence of a base case, it will keep calling itself and get stuck in an
+infinite loop. Soon, the recursion depth* will be exceeded and it will throw
+an error.
+● Recursive call: The recursive function will invoke itself on a smaller version
+of the main problem. We need to be careful while writing this step as it is
+crucial to correctly figure out what your smaller problem is.
+● Small calculation: Generally, we perform a calculation step in each recursive
+call. We can achieve this calculation step before or after the recursive call
+depending upon the nature of the problem.
+Note*: Recursion uses an in-built stack which stores recursive calls. Hence, the
+number of recursive calls must be as small as possible to avoid memory-overflow. If
+the number of recursion calls exceeded the maximum permissible amount, the
+recursion depth* will be exceeded.
+5
+Now, let us see how to solve a few common problems using Recursion.
+Problem Statement - Find Factorial of a Number
+We want to find out the factorial of a natural number.
+Approach: Figuring out the three steps of PMI and then relating the same using
+recursion.
+1. Induction Step: Calculating the factorial of a number n - F(n)
+Induction Hypothesis: We have already obtained the factorial of n-1 - F(n-1)
+2. Expressing F(n) in terms of F(n-1): F(n)=n*F(n-1). Thus we get:
+def fact(n):
+ans = fact(n-1) #Assumption step
+return ans * n; #Solving problem from assumption step
+3. The code is still not complete. The missing part is the base case. Now we will
+dry run to find the case where the recursion needs to stop. Consider n = 5:
+6
+As we can see above, we already know the answer of n = 0, which is 1. So we will
+keep this as our base case. Hence, the code now becomes:
+def factorial(n):
+if n == 0: #base case
+return 1
+else:
+return n*factorial(n-1) # recursive case
+Problem Statement - Fibonacci Number
+Function for Fibonacci series:
+F(n) = F(n-1) + F(n-2), F(0) = 0 and F(1) = 1
+Approach: Figuring out the three steps of PMI and then relating the same using
+recursion.
+1. Induction Step: Calculating the nth Fibonacci number n.
+Induction Hypothesis: We have already obtained the (n-1)th and (n-2)th
+Fibonacci numbers.
+2. Expressing F(n )in terms of F(n-1) and F(n-2): Fn = Fn-1 + Fn-2
+.
+def f(n):
+ans = f(n-1) + f(n-2) #Assumption step
+return ans #Solving problem from assumption step
+3. Let’s dry run the code for achieving the base case: (Consider n= 6)
+7
+From here we can see that every recursive call either ends at 0 or 1 for which we
+already know the answer: F(0) = 0 and F(1) = 1. Hence using this as our base case in
+the code below:
+def fib(n):
+if n <= 1:
+return (n)
+else:
+return (fib(n-1) + fib(n-2))
+Recursion and array
+Let us take an example to understand recursion on arrays.
+Problem Statement - Check If Array Is Sorted.
+8
+We have to tell whether the given array is sorted or not using recursion.
+For example:
+● If the array is {2, 4, 8, 9, 9, 15}, then the output should be YES.
+● If the array is {5, 8, 2, 9, 3}, then the output should be NO.
+Approach: Figuring out the three steps of PMI and then relating the same using
+recursion.
+1. Assumption step: We assume that we have already obtained the answer to
+the array starting from index 1. In other words, we assume that we know
+whether the array (starting from the first index) is sorted.
+2. Solving the problem from the results of the “Assumption step”: Before
+going to the assumption step, we must check the relation between the first
+two elements. Find if the first two elements are sorted or not. If the elements
+are not in sorted order, then we can directly return false. If the first two
+elements are in sorted order, then we will check for the remaining array
+through recursion.
+def isSorted(a, size):
+if (a[0] > a[1]): #Small Calculation
+return false
+isSmallerSorted = isSorted(a + 1, size - 1) #Assumption step
+return isSmallerSorted
+3. We can see that in the case when there is only a single element left or no
+element left in our array, the array is always sorted. Let’s check the final code
+now:
+def isSorted(a, size):
+if (size == 0 or size ==1) #Base case
+return true
+if (a[0] > a[1]) # Small calculation
+return false
+9
+isSmallerSorted = isSorted(a + 1, size - 1) #Recursive call
+return isSmallerSorted
+arr = [2, 3, 6, 10, 11]
+if(isSorted(arr, 5)):
+print("Yes")
+else:
+print("No")
+Problem Statement - First Index of Num
