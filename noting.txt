@@ -524,3 +524,49 @@ if(size == 0): #Base Case
 return -1
 Note: The code written from the above insights can be accessed in the solution tab
 in the question itself
+
+
+===========================
+
+All Indices of A Number
+Here, given an array of length N and an integer x, you need to find all the indexes
+where x is present in the input array. Save all the indexes in an array (in increasing
+order) and return the size of the array.
+Case 1: Array = {1,4,5,7,2}, Integer = 4
+Output: [1], the size of the array will be 1 (as 4 is present at 1st position in the array,
+which is the only position where 4 is present in the given array).
+Case 2: Array = {1,3,5,7,2}, Integer = 4
+Output: [], the size of the array will be 0 (as 4 is not present in the array).
+Case 3: Array = {1,3,4,4,4}, Integer = 4
+Output: [2, 3, 4], the size of the array will be 3 (as 4 is present at three positions in
+the array; i.e., [2, 3, 4]).
+Now, let’s think about solving this problem…
+Approach:
+Now, to solve the question, we have to figure out the following three elements of
+the solution:
+1. Base case
+2. Recursive call
+3. Small calculation
+Let us assume the given array is: [5, 6, 5, 5, 6] and the target element is 5, then the
+output array should be [0, 2, 3] and for the same array, let’s suppose the target
+element is 6, then the output array should be [1, 4].
+15
+To solve this question, the base case should be the case when the size of the input
+array becomes zero. In this case, we should simply return 0, since there are no
+elements.
+The next two components of the solution are Recursive call and Small calculation.
+Let us try to figure them out using the following images:
+So, the following are the recursive call and small calculation components of the
+solution:
+Recursive Call
+size = fun(arr + 1, size - 1, x, output)
+Small Calculation:
+1. Update the elements of the output array by adding one to them.
+16
+2. If the equality exists, then shift the elements and add 0 at the first index of
+the output array. Moreover, increment the size, as we have added one
+element to the output array.
+Note: The code written from the above insights can be accessed in the solution tab
+in the question itself.
+Using the same concept, other problems can be solved using recursion, just
+remember to apply PMI and three steps of recursion intelligently.
