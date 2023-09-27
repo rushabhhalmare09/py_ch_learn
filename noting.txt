@@ -570,3 +570,47 @@ Note: The code written from the above insights can be accessed in the solution t
 in the question itself.
 Using the same concept, other problems can be solved using recursion, just
 remember to apply PMI and three steps of recursion intelligently.
+
+
+==================
+
+Recursion and array
+Let us take an example to understand recursion on arrays.
+Problem Statement - Check If Array Is Sorted.
+8
+We have to tell whether the given array is sorted or not using recursion.
+For example:
+● If the array is {2, 4, 8, 9, 9, 15}, then the output should be YES.
+● If the array is {5, 8, 2, 9, 3}, then the output should be NO.
+Approach: Figuring out the three steps of PMI and then relating the same using
+recursion.
+1. Assumption step: We assume that we have already obtained the answer to
+the array starting from index 1. In other words, we assume that we know
+whether the array (starting from the first index) is sorted.
+2. Solving the problem from the results of the “Assumption step”: Before
+going to the assumption step, we must check the relation between the first
+two elements. Find if the first two elements are sorted or not. If the elements
+are not in sorted order, then we can directly return false. If the first two
+elements are in sorted order, then we will check for the remaining array
+through recursion.
+def isSorted(a, size):
+if (a[0] > a[1]): #Small Calculation
+return false
+isSmallerSorted = isSorted(a + 1, size - 1) #Assumption step
+return isSmallerSorted
+3. We can see that in the case when there is only a single element left or no
+element left in our array, the array is always sorted. Let’s check the final code
+now:
+def isSorted(a, size):
+if (size == 0 or size ==1) #Base case
+return true
+if (a[0] > a[1]) # Small calculation
+return false
+9
+isSmallerSorted = isSorted(a + 1, size - 1) #Recursive call
+return isSmallerSorted
+arr = [2, 3, 6, 10, 11]
+if(isSorted(arr, 5)):
+print("Yes")
+else:
+print("No")
