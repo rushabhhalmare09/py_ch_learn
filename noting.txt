@@ -614,3 +614,81 @@ if(isSorted(arr, 5)):
 print("Yes")
 else:
 print("No")
+
+
+===========Binary Trees - 1 Notes=================
+
+Binary Trees- 1
+What is A Tree?
+● A tree is a data structure similar to a linked list but instead of each node
+pointing simply to the next node in a linear fashion, each node points to
+several nodes.
+● A tree is an example of a non- linear data structure.
+● A tree structure is a way of representing the hierarchical nature of a
+structure in a graphical form.
+Terminology Of Trees
+● The root of a tree is the node with no parents. There can be at most one root
+node in a tree (node A in the above example).
+1
+● An edge refers to the link from a parent to a child (all links in the figure).
+● A node with no children is called a leaf node (E, J, K, H, and I).
+● The children nodes of the same parent are called siblings (B, C, D are
+siblings of parent A and E, F are siblings of parent B).
+● The set of all nodes at a given depth is called the level of the tree (B, C, and
+D are the same level). The root node is at level zero.
+● The depth of a node is the length of the path from the root to the node
+(depth of G is 2, A -> C –> G).
+● The height of a node is the length of the path from that node to the deepest
+node.
+● The height of a tree is the length of the path from the root to the deepest
+node in the tree.
+● A (rooted) tree with only one node (the root) has a height of zero.
+Binary Trees
+● A generic tree with at most two child nodes for each parent node is known as
+a binary tree.
+● A binary tree is made of nodes that constitute a left pointer, a right pointer,
+and a data element. The root pointer is the topmost node in the tree.
+● The left and right pointers recursively point to smaller subtrees on either
+side.
+● An empty tree is also a valid binary tree.
+● A formal definition is: A binary tree is either empty (represented by a None
+pointer), or is made of a single node, where the left and right pointers
+(recursive definition ahead) each point to a binary tree.
+2
+Types of binary trees:
+Full binary trees: A binary tree in which every node has 0 or 2 children is
+termed as a full binary tree.
+Complete binary tree: A complete binary tree has all the levels filled except for
+the last level, which has all its nodes as much as to the left.
+Perfect binary tree: A binary tree is termed perfect when all its internal nodes
+have two children along with the leaf nodes that are at the same level.
+3
+A degenerate tree: In a degenerate tree, each internal node has only one child.
+4
+The tree shown above is degenerate. These trees are very similar to linked-lists.
+Balanced binary tree: A binary tree in which the difference between the depth
+of the two subtrees of every node is at most one is called a balanced binary tree.
+5
+Binary tree representation:
+Binary trees can be represented in two ways:
+Sequential representation
+● This is the most straightforward technique to store a tree data structure. An
+array is used to store the tree nodes.
+● The number of nodes in a tree defines the size of the array.
+● The root node of the tree is held at the first index in the array.
+● In general, if a node is stored at the i
+th
+location, then its left and right child
+are kept at (2i)th and (2i+1)th
+locations in the array, respectively.
+Consider the following binary tree:
+6
+The array representation of the above binary tree is as follows:
+As discussed above, we see that the left and right child of each node is stored at
+locations 2*(nodePosition) and 2*(nodePosition)+1, respectively.
+7
+For Example, The location of node 3 in the array is 3. So its left child will be placed
+at 2*3 = 6. Its right child will be at the location 2*3 +1 = 7. As we can see in the
+array, children of 3, which are 6 and 7, are placed at locations 6 and 7 in the array.
+Note: The sequential representation of the tree is not preferred due to the massive
+amount of memory consumption by the array.
