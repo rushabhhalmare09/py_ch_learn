@@ -761,3 +761,48 @@ if(size == 0): #Base Case
 return -1
 Note: The code written from the above insights can be accessed in the solution tab
 in the question itself.
+
+-==============---
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+## Read input as specified in the question.
+## Print output as specified in the question.
+
+def Staircase(n):
+    if(n<=3):
+        if(n==1):
+            return 1
+        elif(n==2):
+            return 2
+        else:
+            return 4
+    x=Staircase(n-1)
+    y=Staircase(n-2)
+    z=Staircase(n-3)
+    return x+y+z
+n=int(input())
+a=Staircase(n)
+print(a)
