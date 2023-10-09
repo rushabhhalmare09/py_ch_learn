@@ -945,3 +945,65 @@ b = 2.0
 print(b, "is of type", type(b))
 b = 1+2j
 print(b, "is complex number?", isinstance(b,complex))
+
+================
+
+Traditional Programming Languages’ Variables in Memory
+Let us study how variables and the values they are assigned, are represented in
+memory, in traditional programming languages like C, C++, Java, etc.
+In these languages, variables are like storage containers. They are like named
+storage locations that store some value. In such cases, whenever we declare a new
+variable, a new storage location is given to that name/label and the value is stored
+at that named location. Now, whenever a new value is reassigned to that variable,
+the storage location remains the same. However, the value stored in the storage
+location is updated. This can be shown from the following illustration.
+Consider the following script:
+Age = 20
+Age = 30 # Re-assigning a different value to the same variable
+5
+In the above script, when we declare a new variable Age, a container box/ Memory Location
+is named Age and the value 20 is stored in the memory address 1000245 with name/label,
+Age. Now, on reassigning the value 30 to Age, the value 30 is stored in the same memory
+location. This is how the variables behave in Traditional programming languages.
+Python Variables in Memory
+Python variables are not created in the form most other programming languages
+do. These variables do not have fixed locations, unlike other languages. The
+locations they refer/point to changes every time their value changes.
+Python preloads some commonly used values in an area of memory. This memory space
+has values/literals at defined memory locations and all these locations have different
+addresses.
+When we give the command, Age = 20, the variable Age is created as a label pointing to a
+memory location where 20 is already stored. If 20 is not present in any of the memory
+locations, then 20 is stored in an empty memory location with a unique address and then
+the Age is made to point to that memory location.
+6
+Now, when we give the second command, Age = 30, the label Age will not have the same
+location as earlier. Now it will point to a memory location where 30 is stored. So this time
+the memory location for the label Age is changed.
+Data Types
+Introduction
+Data types are the classification or categorization of data items. Data types
+represent a kind of value that determines what operations can be performed on
+that data. Numeric, non-numeric, and Boolean (true/false) data are the most used
+data types. However, each programming language has its classification largely
+reflecting its programming philosophy. Python offers the following built-in data
+types:
+7
+● Numbers
+○ Integers
+○ Floating Point Numbers
+○ Complex Numbers
+● Strings
+● Boolean Values
+● List, Tuple, and Dictionary ( To be covered later in the course )
+Type Code Description Default Size (In Bytes)
+int Integers 4
+float Floating Point Numbers 4
+bool Boolean Values 1
+Note:- If a variable has been assigned a value of some data type. It can be reassigned a
+value belonging to some other Data Type in the future.
+a= "Raw" # String Data Type
+a= 10 # Integer Data Type
+a= 5.6 # Floating Point Number Data Type
+a= 1+8j # Complex Number
+a= True # Boolean Value
