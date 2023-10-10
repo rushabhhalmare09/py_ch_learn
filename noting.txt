@@ -1007,3 +1007,97 @@ a= 10 # Integer Data Type
 a= 5.6 # Floating Point Number Data Type
 a= 1+8j # Complex Number
 a= True # Boolean Value
+
+
+===================
+
+Python Numbers
+Introduction
+Number data types store numerical values. Python supports Integers, floating-point
+numbers, and complex numbers. They are defined as int, float, and complex classes.
+● Integers can be of any length (Only limited by the memory available). They do not
+have a decimal point and can be positive or negative.
+8
+● A floating-point number is a number having a fractional part. The presence of a
+decimal point indicates a floating-point number. They have a precision of up to 15
+digits.
+● 1 is an integer, 1.0 is a floating-point number.
+● Complex numbers are of the form, x + yj, where x is the real part and y is the
+imaginary part.
+We can use the type() function to know which class a variable or a value belongs to.
+Similarly, the isinstance() function is used to check if an object belongs to a particular
+class.
+Here are a few examples:-
+b = 5
+print(b, "is of type", type(b))
+b = 2.0
+print(b, "is of type", type(b))
+b = 1+2j
+print(b, "is complex number?", isinstance(b,complex))
+And we will get the output as:
+5 is of type <class 'int'>
+2.0 is of type <class 'float'>
+1+2j is complex number? True
+Arithmetic Operators in Python
+The Arithmetic Operators are used in Python in the same way as they are used in
+Mathematics.
+OPERATOR DESCRIPTION
++ Add two operands
+- Subtracts second operand from the first
+9
+* Multiplies two operands
+/ Divides numerator by denominator (Floating Point Division)
+// Divides numerator by denominator (Floor Division) - Acts as a floor function
+** Exponent Operator- The first operand raised to the power of the second
+operand
+% Modulo Operator- Calculates remainder left after dividing first by second
+Let us see how these operators work:-
+In[] : print(5 + 2) # Addition
+Out[] : 7
+In[] : print(5 - 2) # Subtraction
+Out[] : 3
+In[] : print(5 * 2) # Multiplication
+Out[] : 10
+In[] : print(5 / 2) # Floating Point Division
+Out[] : 2.5
+In[] : print(5 // 2) # Floor Division
+Out[] : 2 # 5 divided by 2 gives 2.5 and value of floor(2.5) is 2
+In[] : print(5 ** 2) # Calculate Exponent
+Out[] : 25 # 5 raised to the power of 2 is 25
+In[] : print(5 % 2) # Modulus
+Out[] : 1 # Remainder 1 is left after dividing 5 by 2
+Taking User Input
+Developers often need to interact with users, either to get data or to provide some sort of
+result.
+How to take User Input?
+10
+To get the input from the user interactively, we can use the built-in function, input(). This
+function is used in the following manner:
+variable_to_hold_the_input_value = input(<Prompt to be displayed>)
+For example:
+In[] : age = input("What is your age?")
+The above statement will display the prompt as:-
+What is your age?________ ←{User input here}
+We will get the following interactive output:
+In[] : name = input("Enter your name: ")
+Enter your name: Rishabh #User Input
+In[] : age = input("Enter your age: ")
+Enter your age: 20 #User Input
+In[] : name
+Out[] : 'Rishabh'
+In[] : age
+Out[] : '19'
+Note:- input() function always returns a value of the String type. Notice that in the
+above script the output for both name and age, Python has enclosed the output in quotes,
+like 'Rishabh' and '19', which implies that it is of String type. This is just because,
+whatever the user inputs in the input() function, it is treated as a String. This would
+mean that even if we input an integer value like 20, it will be treated like a string '19' and
+not an integer. Now, we will see how to read Numbers in the next section.
+Reading Numbers
+Python offers two functions int() and float() to be used with the input() function to
+convert the values received through input() into the respective numeric types integer and
+floating-point numbers. The steps will be:-
+1. Use the input() function to read the user input.
+11
+2. Use the int() and float() function to convert the value read into integers and
+floating-point numbers, respectively. This process is called Type Casting.
