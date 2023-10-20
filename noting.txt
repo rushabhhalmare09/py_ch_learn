@@ -1189,3 +1189,100 @@ else:
 print("Hi") # This code block will be executed
 The output of the above code will be:
 Hi # Else statement block is executed
+
+
+==============================XXXX============================
+
+Introduction to While Loops
+The while loop is somewhat similar to an if statement, it executes the code block inside if
+the expression/condition is True. However, as opposed to the if statement, the while loop
+continues to execute the code repeatedly, as long as the expression is True. In other words,
+a while loop iterates over a block of code.
+In Python, the body of a while loop is determined by the indentation. It starts with
+indentation and ends at the first unindented line.
+The most important part of a while loop is the looping variable. This looping variable
+controls the flow of iterations. An increment or decrement in this looping variable is
+important for the loop to function. It determines the next iteration level. In case of the
+absence of such increment/decrement, the loop gets stuck at the current iteration and
+continues forever until the process is manually terminated.
+The general syntax of a while loop is similar to an if statement with a few differences. It is
+shown below:
+while(Expression/Condition/Boolean):
+<Execute this code block till the Expression is True>
+#Increment/Decrement in looping variable
+Example:
+Problem Statement: Given an Integer n, Find the Sum of first n Natural numbers.
+n = 4
+sum = 0
+i = 1 #Initialising the looping variable to 1
+while (i<=n): #The loop will continue till the value of i<number
+sum = sum + i
+i = i+1 #Value of i is updated at the end of every iteration
+print(sum)
+We get the output as:
+10
+11
+Check Prime: Using While Loop and Nested If Statements
+Problem Statement: Given any Integer, check whether it is Prime or Not.
+Approach to be followed: A prime number is always positive so we are checking that at
+the beginning of the program. Next, we are dividing the input number by all the numbers in
+the range of 2 to (number - 1) to see whether there are any positive divisors other than
+1 and the number itself (Condition for Primality). If any divisor is found then we display, “Is
+Prime”, else we display, “Is Not Prime”.
+Note:- We are using the break statement in the loop to come out of the loop as soon as
+any positive divisor is found as there is no further check required. The purpose of a break
+statement is to break out of the current iteration of the loop so that the loop stops. This
+condition is useful, as once we have found a positive divisor, we need not check for more
+divisors and hence we can break out of the loop. You will study about the break statement
+in more detail in the latter part of this course.
+# taking input from the user
+number = int(input("Enter any number: "))
+isPrime= True #Boolean to store if number is prime or not
+if number > 1: # prime number is always greater than 1
+i=2
+while i< number:
+if (number % i) == 0: # Checking for positive divisors
+isPrime= False
+break
+i=i+1
+if(number<=1): # If number is less than or equal to 1
+print("Is Not Prime")
+elif(isPrime): # If Boolean is true
+print("Is Prime")
+else:
+print("Is Not Prime")
+12
+Nested Loops
+Python programming language allows the usage of one loop inside another loop. The loops
+can be nested the same way, the conditional statements are. The general syntax of such
+an arrangement is:
+while(Expression1):
+<Execute this code block till the Expression1 is True>
+while(Expression2):
+<Execute this code block till the Expression2 is True>
+#Increment/Decrement in looping variable
+#Increment/Decrement in looping variable
+**Keep the indentations in mind
+Print All Primes- Using Nested Loops
+Problem Statement: Given an Integer, Print all the Prime Numbers between 0 and that
+Integer.
+Approach to be followed: Run a loop from 2 - n, in order to check which all numbers in
+this range are prime. Let the value of the looping variable for this loop in some iteration be
+i. Run another loop inside this loop which will check if i is prime or not. This loop will run
+from 2 to i (Similar to the Check Prime Problem). This way we have a loop nested inside
+another.
+n=int(input()) # Taking User Input
+k=2 # Looping variable starting from 2
+While k<=n:# Loop will check all numbers till n
+d=2 # The inner loop also checks all numbers starting from 2
+isPrime = False
+While d<k:
+if(k%d==0):
+isPrime = True
+d=d+1
+if(not(isPrime)):
+print(k)
+k=k+1
+
+
+
