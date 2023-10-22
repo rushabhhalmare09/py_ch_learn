@@ -1284,5 +1284,148 @@ if(not(isPrime)):
 print(k)
 k=k+1
 
-
+==========================
+Triangular Patterns
+Pattern 1.6
+# N = 5
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+Approach:
+From the above pattern we can observe:
+➔ Number of Rows: The pattern has 5 rows. We have to print the pattern for N
+rows.
+➔ Number of Columns: The number of columns in any row is the same as the
+corresponding row number.1st row has 1 column, 2nd row has 2 columns, and
+so on. Thus, in a pattern of N rows, the i
+th row will have i columns.
+➔ What to print: All the entries in any row, are the same as the corresponding
+row numbers. Thus in a pattern of N rows, all the entries of the i
+th row are i
+(1st row has all 1’s, 2nd row has all 2’s, and so on).
+Python Implementation:
+N=int(input()) #Take user input, N= Number of Rows
+row=1; #The loop starts with the 1st row
+while row<=N: #Loop will on for N rows
+col=1; #The loop starts with the first column in the current row
+while col<=row: # Number of cols = The row number
+print(row,end="") #Printing the row number in all columns
+col=col+1 #Increment the current column (Inner Loop)
+8
+row=row+1 #Increment the current row (Outer Loop)
+print() #Add a new Line after each row
+Pattern 1.7
+# N = 5
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+Approach:
+From the above pattern we can observe:
+➔ Number of Rows: The pattern has 5 rows. We have to print the pattern for N
+rows.
+➔ Number of Columns: The number of columns in any row is the same as the
+corresponding row number.1st row has 1 column, 2nd row has 2 columns, and
+so on. Thus, in a pattern of N rows, the i
+th row will have i columns.
+➔ What to print: All the entries in any row, are the same as the corresponding
+column numbers. Thus in a pattern of N rows, all the entries of the i
+th
+column are i (1st column has all 1’s, 2nd column has all 2’s, and so on).
+Python Implementation:
+N=int(input()) #Take user input, N= Number of Rows
+row=1; #The loop starts with the 1st row
+while row<=N: #Loop will on for N rows
+col=1; #The loop starts with the first column in the current row
+while col<=row: # Number of cols = The row number
+print(col,end="") #Printing the column number in all columns
+col=col+1 #Increment the current column (Inner Loop)
+row=row+1 #Increment the current row (Outer Loop)
+9
+print() #Add a new Line after each row
+Pattern 1.8
+# N = 5
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+Approach:
+From the above pattern we can observe:
+➔ Number of Rows: The pattern has 5 rows. We have to print the pattern for N
+rows.
+➔ Number of Columns: The number of columns in any row is the same as the
+corresponding row number.1st row has 1 column, 2nd row has 2 columns, and
+so on. Thus, in a pattern of N rows, the i
+th row will have i columns.
+➔ What to print: The pattern starts with 1 and then each column entry is
+incremented by 1. Thus, we will initialize a variable temp=1. We will keep
+printing the value of temp in the successive columns and upon printing, we
+will increment the value of temp by 1.
+Python Implementation:
+N=int(input()) #Take user input, N= Number of Rows
+row=1; #The loop starts with the 1st row
+temp=1
+while row<=N: #Loop will on for N rows
+col=1; #The loop starts with the first column in the current row
+while col<=row: #Number of cols = The row number
+print(temp,end="") #Printing value of temp in all columns
+temp=temp+1
+col=col+1 #Increment the current column (Inner Loop)
+10
+row=row+1 #Increment the current row (Outer Loop)
+print() #Add a new Line after each row is printed
+Character Patterns
+Pattern 1.9
+# N = 4
+ABCD
+ABCD
+ABCD
+ABCD
+Approach:
+From the above pattern we can observe:
+➔ Number of Rows: The pattern has 4 rows. We have to print the pattern for N
+rows.
+➔ Number of Columns: All the rows have 4 columns. Thus, in a pattern of N
+rows, all the rows will have N columns.
+➔ What to print: The 1st column has all A’s, 2nd column has all B’s, and so on.
+The ASCII value of A is 65. In the 1st column, the character corresponds to the
+ASCII value 65 (64+1). In the 2nd column, the character corresponds to the
+ASCII value 66 (64+2). Thus, all the entries in the i
+th column are equal to the
+character corresponding to the ASCII value 64+i. The chr() function gives
+the character associated with the integral ASCII value within the parentheses.
+Python Implementation:
+N=int(input()) #Take user input, N= Number of Rows
+row=1; #The loop starts with the 1st row
+while row<=N: #Loop will on for N rows
+col=1; #The loop starts with the first column in the current row
+while col<=N: #Loop will on for N columns
+print(chr(64+col),end="") #Printing a (*) in all columns
+11
+col=col+1 #Increment the current column (Inner Loop)
+row=row+1 #Increment the current row (Outer Loop)
+print() #Add a new Line after each row is printed
+Pattern 1.10
+# N = 4
+ABCD
+BCDE
+CDEF
+DEFG
+Approach:
+From the above pattern we can observe:
+➔ Number of Rows: The pattern has 4 rows. We have to print the pattern for N
+rows.
+➔ Number of Columns: All the rows have 4 columns. Thus, in a pattern of N
+rows, all the rows will have N columns.
+➔ What to print: This pattern is very similar to Pattern 1.5. We can implement
+this using a similar code with a minor change. Instead of integers, we need
+capital letters of the same order. Instead of 1, we need A, instead of 2, we
+need B and so on. ASCII value of A is 65. Thus if we add 64 to all the entries
+in Pattern 1.5 and find their ASCII values, we will get our result. The
+chr() function gives the character associated with the integral ASCII value
+within the parentheses.
 
