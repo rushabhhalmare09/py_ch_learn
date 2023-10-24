@@ -1503,3 +1503,127 @@ is printed, it will be printed in the same line as *.
 There are two popular types of patterns-related questions that are usually posed:
 ● Square Pattern - Pattern 1.1 is square.
 ● Triangular Pattern
+
+
+
+================
+
+
+Square Patterns
+Pattern 1.2
+# N = 5
+1 1 1 1 1
+2 2 2 2 2
+3 3 3 3 3
+4 4 4 4 4
+5 5 5 5 5
+Approach:
+From the above pattern we can observe:
+➔ Number of Rows: The pattern has 5 rows. We have to print the pattern for N
+rows.
+➔ Number of Columns: All the rows have 5 columns. Thus, in a pattern of N
+rows, all the rows will have N columns.
+➔ What to print: All the entries in any row, are the same as the corresponding
+row numbers. Thus in a pattern of N rows, all the entries of the i
+th row are i
+(1st row has all 1’s, 2nd row has all 2’s, and so on).
+Python Implementation:
+N=int(input()) #Take user input, N= Number of Rows
+row=1; #The loop starts with the 1st row
+while row<=N: #Loop will on for N rows
+col=1; #The loop starts with the first column in the current row
+while col<=N: #Loop will on for N columns
+print(row,end="") #Printing the row number in all columns
+col=col+1 #Increment the current column (Inner Loop)
+row=row+1 #Increment the current row (Outer Loop)
+4
+print() #Add a new Line after each row
+Pattern 1.3
+# N = 5
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+Approach:
+From the above pattern we can observe:
+➔ Number of Rows: The pattern has 5 rows. We have to print the pattern for N
+rows.
+➔ Number of Columns: All the rows have 5 columns. Thus, in a pattern of N
+rows, all the rows will have N columns.
+➔ What to print: All the entries in any row, are the same as the corresponding
+column numbers. Thus in a pattern of N rows, all the entries of the i
+th
+column are i (1st column has all 1’s, 2nd column has all 2’s, and so on).
+Python Implementation:
+N=int(input()) #Take user input, N= Number of Rows
+row=1; #The loop starts with the 1st row
+while row<=N: #Loop will on for N rows
+col=1; #The loop starts with the first column in the current row
+while col<=N: #Loop will on for N columns
+print(col,end="") #Printing the column number in all columns
+col=col+1 #Increment the current column (Inner Loop)
+row=row+1 #Increment the current row (Outer Loop)
+print() #Add a new Line after each row
+5
+Pattern 1.4
+# N = 5
+5 4 3 2 1
+5 4 3 2 1
+5 4 3 2 1
+5 4 3 2 1
+5 4 3 2 1
+Approach:
+From the above pattern we can observe:
+➔ Number of Rows: The pattern has 5 rows. We have to print the pattern for N
+rows.
+➔ Number of Columns: All the rows have 5 columns. Thus, in a pattern of N
+rows, all the rows will have N columns.
+➔ What to print: All the entries in any row, are N-columnNumber+1. Thus in a
+pattern of N rows, all the entries of the i
+th column are N-i+1 (1st column has
+all 5’s (5-1+1), 2nd column has all 4’s (5-2+1), and so on).
+Python Implementation:
+N=int(input()) #Take user input, N= Number of Rows
+row=1; #The loop starts with the 1st row
+while row<=N: #Loop will on for N rows
+col=1; #The loop starts with the first column in the current row
+while col<=N: #Loop will on for N columns
+print(N-col+1,end="") #Printing (N-col+1) in all columns
+col=col+1 #Increment the current column (Inner Loop)
+row=row+1 #Increment the current row (Outer Loop)
+print() #Add a new Line after each row
+6
+This way there can be several other square patterns and you can easily print them using
+this approach- By finding the number of Rows, Columns and What to print.
+Pattern 1.5
+# N = 5
+1 2 3 4 5
+2 3 4 5 6
+3 4 5 6 7
+4 5 6 7 8
+5 6 7 8 9
+Approach:
+From the above pattern we can observe:
+➔ Number of Rows: The pattern has 5 rows. We have to print the pattern for N
+rows.
+➔ Number of Columns: All the rows have 5 columns. Thus, in a pattern of N
+rows, all the rows will have N columns.
+➔ What to print: The first entry in the 1st row is 1, the first entry in the 2nd row
+is 2, and so on. Further, these values are incremented continuously by 1 in
+the remaining entries of any particular row. Thus in a pattern of N rows, the
+first entry of the i
+th row is i. The remaining entries in the i
+th row are
+i+1,i+2, and so on. It can be observed that any entry in this pattern can be
+written as row+col-1.
+N=int(input()) #Take user input, N= Number of Rows
+row=1; #The loop starts with the 1st row
+while row<=N: #Loop will on for N rows
+col=1; #The loop starts with the first column in the current row
+while col<=N: #Loop will on for N columns
+print(col+row-1,end="") #Printing row+col-1 in all columns
+col=col+1 #Increment the current column (Inner Loop)
+row=row+1 #Increment the current row (Outer Loop)
+7
+print() #Add a new Line after each row is printed
