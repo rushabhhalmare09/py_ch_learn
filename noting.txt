@@ -1902,3 +1902,49 @@ while currRow <= n:
         currCol += 1 
     print() 
     currRow += 1
+================
+
+
+More On Loops
+range() Function
+The ​range() function in Python generates a ​List​ which is a special sequence type. A
+sequence in Python is a succession of values bound together by a single name.
+The syntax of the ​range() function is given below:
+range(<Lower Limit>, <Upper Limit>) # Both limits are integers
+The function, ​range(L,U), will produce a list having values ​L, L+1, L+2....(U-1).
+Note: ​The lower limit is included in the list but the upper limit is not.
+For Example:
+>>> range(0,5)
+[0,1,2,3,4] #Output of the range() function
+Note: ​The default step value is +1, i.e. the difference in the consecutive values of
+the sequence generated will be +1.
+If you want to create a list with a step value other than 1, you can use the following
+syntax:
+range(<Lower Limit>, <Upper Limit>, <Step Value>)
+The function, ​range(L, U, S), will produce a list ​[L, L+S, L+2S...<= (U-1)].
+For Example:
+>>> range(0,5,2)
+[0,2,4] #Output of the range() function
+1
+in Operator
+The ​in operator tests if a given value is contained in a sequence or not and returns
+True or ​False accordingly. For eg.,
+3 in [1,2,3,4]
+will return ​True as value 3 is contained in the list.
+"A" in "BCD"
+will return ​False as ​"A" is not contained in the String ​"BCD".
+for Loop
+The ​for loop of Python is designed to process the items of any sequence, such as a
+list or a string, one by one. The syntax of a ​for loop is:
+for <variable> in <sequence>:
+Statements_to_be_executed
+For example, consider the following loop:
+for a in [1, 4, 7]:
+print(a)
+The given ​for loop will be processed as follows:
+1. Firstly, the looping variable ​a will be assigned the first value from the list i.e.
+1, and the statements inside the for loop will be executed with this value of ​a.
+Hence 1 will be printed.
+2. Next, ​a will be assigned 4 and 4 will be printed,
+3. Finally, ​a will be assigned 7, and 7 will be printed.
+4. All the values in the list are executed, hence the loop ends.
