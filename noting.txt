@@ -2005,3 +2005,86 @@ without any expression, then the special value None is returned.
 In the example given above, the sum a+b is returned.
 Note: In Python, you need not specify the return type i.e. the data type of returned
 value.
+
+
+===================
+
+Calling/Invoking A Function
+Once you have defined a function, you can call it from another function, program,
+or even the Python prompt. To use a function that has been defined earlier, you
+need to write a function call.
+A function call takes the following form:
+<function-name> (<value-to-be-passed-as-argument>)
+The function definition does not execute the function body. The function gets
+executed only when it is called or invoked. To call the above function we can write:
+add(5,7)
+In this function call, a = 5 and b = 7.
+3
+Arguments And Parameters
+As you know that you can pass values to functions. For this, you define variables to
+receive values in the function definition and you send values via a function call
+statement. For example, in the add() function, we have variables a and b to receive
+the values and while calling the function we pass the values 5 and 7. We can define
+these two types of values:
+● Arguments: The values being passed to the function from the function call
+statement are called arguments. Eg. 5 and 7 are arguments to the add()
+function.
+● Parameters: The values received by the function as inputs are called
+parameters. Eg. a and b are the parameters of the add() function.
+Types Of Functions
+We can divide functions into the following two types:
+1. User-defined functions: Functions that are defined by the users. Eg. The
+add() function we created.
+2. Inbuilt Functions: Functions that are inbuilt in python. Eg. The print()
+function.
+4
+Scope Of Variables
+All variables in a program may not be accessible at all locations in that program.
+Part(s) of the program within which the variable name is legal and accessible, is
+called the scope of the variable. A variable will only be visible to and accessible by
+the code blocks in its scope.
+There are broadly two kinds of scopes in Python −
+● Global scope
+● Local scope
+Global Scope
+A variable/name declared in the top-level segment (__main__) of a program is said
+to have a global scope and is usable inside the whole program (Can be accessed
+from anywhere in the program).
+In Python, a variable declared outside a function is known as a global variable. This
+means that a global variable can be accessed from inside or outside of the function.
+Local Scope
+Variables that are defined inside a function body have a local scope. This means
+that local variables can be accessed only inside the function in which they are
+declared.
+The Lifetime of a Variable
+The lifetime of a variable is the time for which the variable exists in the memory.
+● The lifetime of a Global variable is the entire program run (i.e. they live in the
+memory as long as the program is being executed).
+● The lifetime of a Local variable is their function’s run (i.e. as long as their
+function is being executed).
+5
+Creating a Global Variable
+Consider the given code snippet:
+x = "Global Variable"
+def foo():
+print("Value of x: ", x)
+foo()
+Here, we created a global variable x = "Global Variable". Then, we created a
+function foo to print the value of the global variable from inside the function. We
+get the output as:
+Global Variable
+Thus we can conclude that we can access a global variable from inside any function.
+What if you want to change the value of a Global Variable from inside a
+function?
+Consider the code snippet:
+x = "Global Variable"
+def foo():
+x = x -1
+print(x)
+foo()
+In this code block, we tried to update the value of the global variable x. We get an
+output as:
+UnboundLocalError: local variable 'x' referenced before assignment
+This happens because, when the command x=x-1, is interpreted, Python treats this
+x as a local variable and we have not defined any local variable x inside the function
+foo().
