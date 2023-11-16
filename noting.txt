@@ -2149,3 +2149,76 @@ We would get an error as:
 SyntaxError: non-default argument follows default argument
 Thus to summarise, in a function header, any parameter can have a default value
 unless all the parameters to its right have their default values.
+
+
+==================
+
+
+def checkMember(n):
+    a = 0
+    b = 1
+    while a < n:
+        c = a + b
+        a = b
+        b = c
+    if a == n:
+        return True
+    else:
+        return False
+    pass
+
+n=int(input())
+if(checkMember(n)):
+    print("true")
+else:
+    print("false")
+
+---------
+
+def checkPalindrome(num):
+#Implement Your Code Here
+    n = num
+    rn = 0
+    while(n > 0):
+       r = n % 10
+       rn = (rn * 10) + r
+       n = n // 10
+    if rn == num:
+        return True
+    else:
+        return False
+
+num = int(input())
+isPalindrome = checkPalindrome(num)
+if(isPalindrome):
+	print('true')
+else:
+	print('false')
+
+=--------
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+Number = int(input())
+
+Sum = 0
+Times = 0
+
+Temp = Number
+while Temp > 0:
+    Times = Times + 1
+    Temp = Temp // 10
+
+Temp = Number
+for n in range(1, Temp + 1):
+    Reminder = Temp % 10
+    Sum = Sum + (Reminder ** Times)
+    Temp //= 10
+
+if Number == Sum:
+    print('true')
+else:
+    print('false')
