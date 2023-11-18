@@ -2222,3 +2222,107 @@ if Number == Sum:
     print('true')
 else:
     print('false')
+
+
+=============================
+
+Conditionals and Loops
+Boolean Data Type
+A boolean expression (or logical expression) evaluates to one of the two states - True or
+False. Several functions and operations in Python return boolean objects.
+The assignment of boolean datatype to some variable can be done similar to other data
+types. This is shown as follows:-
+>>> a = True
+>>> type(a)
+<class 'bool'>
+>>> b = False
+>>> type(b)
+<class 'bool'>
+Note:- Here True and False are Reserved keywords. ie They are not written as "True" or
+"False", as then they will be taken as strings and not boolean values.
+C = "True"
+D = "False"
+Here, C and D are of type String.
+Also, note the keywords True and False must have an Upper Case first letter. Using a
+lowercase true or false will return an error.
+>>> e = true
+Traceback (most recent call last):
+File "<input>", line 1, in <module>
+NameError: name 'true' is not defined
+1
+Relational Operators
+The operators which compare the values of their operands are called comparison/
+relational operators. Python has 6 most common relational operators. Let X and Y be the
+two operands and let X = 5 and Y = 10.
+Operator Description Example
+==
+If the values of two operands are equal, then the
+condition is true, otherwise, it is false.
+Common Mistake:- Do not confuse it with the Assignment
+Operator(=).
+(X == Y) is false
+!= If the values of the two operands are not equal, then the
+condition is true.
+(X != Y) is true.
+>
+If the value of the left operand is greater than the value of
+the right operand, then the condition is true.
+(X > Y) is false
+<
+If the value of the left operand is less than the value of
+the right operand, then the condition is true.
+(X < Y) is true.
+>= If the value of the left operand is greater than or equal to
+the value of the right operand, then the condition is true.
+(X >= Y) is false.
+<= If the value of the left operand is less than or equal to the
+value of the right operand, then the condition is true.
+(X <= Y) is true.
+2
+Logical Operators
+The operators which act on one or two boolean values and return another boolean value
+are called logical operators. There are 3 key logical operators. Let X and Y be the two
+operands and let X = True and Y = False.
+Operator Description Example
+and Logical AND: If both the operands are true then
+the condition is true.
+(X and Y) is false
+or Logical OR: If any of the two operands are then
+the condition is true.
+(X or Y) is true
+not Logical NOT: Used to reverse the logical state of
+its operand.
+Not(X) is false
+The Truth table for all combination of values of X and Y
+X Y X and Y X or Y not(X) not(Y)
+T T T T F F
+T F F T F T
+F T F T T F
+F F F F T T
+3
+Let us consider an example code to understand the relational operators in Python:
+x = 9
+y = 13
+print('x > y is',x > y) # Here 9 is not greater than 13
+print('x < y is',x < y) # Here 9 is less than 13
+print('x == y is',x == y) # Here 9 is not equal to 13
+print('x != y is',x != y) # Here 9 is not equal to 13
+print('x >= y is',x >= y) # Here 9 is not greater than or equal to 13
+print('x <= y is',x <= y) # Here 9 is less than 13
+And we get the output as:
+x > y is False
+x < y is True
+x == y is False
+x != y is True
+x >= y is False
+x <= y is True
+Let us consider another example code to understand the logical operators in Python:
+x = True
+y = False
+print('x and y is',x and y)
+print('x or y is',x or y)
+print('not x is',not x)
+And we get the output as:
+x and y is False
+x or y is True
+not x is False
