@@ -2398,3 +2398,82 @@ else:
 <Code block to be executed in case the condition is False>
 *** Keep in mind the indentation levels for various code blocks. Let us now take an
 example to understand If-Else statements in depth.
+
+
+=========
+
+
+Distinguishing between Odd and Even numbers:
+Problem Statement: Given a number, print whether it is odd or even.
+Approach: In order fora number to be even, it must be divisible by 2. Which means that the
+remainder upon dividing the number by 2 must be 0. Thus, in order to distinguish between
+odd and even numbers, we can use this condition. The numbers which leave a remainder 0
+on division with 2 will be categorized as even, else the number is odd. This can be written in
+Python as follows:-
+num = 23
+If num%2 == 0:
+print("Even Number")
+else:
+print("Odd Number")
+The output of this code will be:-
+Odd Number
+Since 23 is an odd number, it doesn’t satisfy the if condition, and hence it goes to else
+and executes the command.
+7
+If-Elif-Else statements
+So far we have looked at Simple If and a single If-Else statement. However, imagine a
+situation in which if a condition is satisfied, we want a particular block of code to be
+executed, and if some other condition is fulfilled we want some other block of code to run.
+However, if none of the conditions is fulfilled, we want some third block of code to be
+executed. In this case, we use an if-elif-else ladder.
+In this, the program decides among multiple conditionals. The if statements are executed
+from the top down. As soon as one of the conditions controlling the if is true, the
+statement associated with that if is executed, and the rest of the ladder is bypassed. If
+none of the conditions is true, then the final else statement will be executed.
+The general syntax of an if-elif-else ladder will be:
+if <Condition 1>:
+<Execute this code block>
+elif <Condition 2>:
+<Execute this code block>
+.
+.
+elif <Condition X>:
+<Execute this code block>
+else:
+<Execute this code block>
+*** Keep in mind the indentation levels for various code blocks.
+Note:- We can have as many elif statements as we want, between the if and the else
+statements. This means we can consider as many conditions as we want. It should be
+noted that once an if or elif condition is executed, the remaining elif and else
+statements will not be executed.
+8
+Let us now consider an example to understand If-Elif-Else statements in depth.
+Finding the largest among three numbers
+Problem Statement: Given three numbers A, B and C, find the largest among the three
+and print it.
+Approach: Let A, B, and C, be 3 numbers. We can construct an if-elif-else ladder. We have
+to consider the following conditions:
+● If A is greater than or equal to both B and C, then A is the largest Number.
+● If B is greater than or equal to both A and C, then B is the largest number.
+● However, if none of these conditions is true it means that C is the largest number.
+Thus, we get the following implementation for the above approach.
+A = 10
+B = 20
+C = 30
+if A>=B and A>= C:
+print(A)
+elif B>=C and B>=A:
+print(B)
+else:
+Print(C)
+● Here since 10 is not greater than 20 and 30, the first if the condition is not
+satisfied. The code goes on to the elif condition.
+● Now, 20 is also not greater than both 10 and 30, thus even the elif condition is not
+true. Thus, the else code block will now be executed.
+● Thus the output will be 30, as it is the largest among the three. The else conditional
+block is executed.
+The output of the above code will be:
+30
+
+
+
