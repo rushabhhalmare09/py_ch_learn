@@ -2568,3 +2568,49 @@ elif(isPrime): # If Boolean is true
 print("Is Prime")
 else:
 print("Is Not Prime")
+
+Nested Loops
+Python programming language allows the usage of one loop inside another loop. The loops
+can be nested the same way, the conditional statements are. The general syntax of such
+an arrangement is:
+while(Expression1):
+<Execute this code block till the Expression1 is True>
+while(Expression2):
+<Execute this code block till the Expression2 is True>
+#Increment/Decrement in looping variable
+#Increment/Decrement in looping variable
+**Keep the indentations in mind
+Print All Primes- Using Nested Loops
+Problem Statement: Given an Integer, Print all the Prime Numbers between 0 and that
+Integer.
+Approach to be followed: Run a loop from 2 - n, in order to check which all numbers in
+this range are prime. Let the value of the looping variable for this loop in some iteration be
+i. Run another loop inside this loop which will check if i is prime or not. This loop will run
+from 2 to i (Similar to the Check Prime Problem). This way we have a loop nested inside
+another.
+n=int(input()) # Taking User Input
+k=2 # Looping variable starting from 2
+While k<=n:# Loop will check all numbers till n
+d=2 # The inner loop also checks all numbers starting from 2
+isPrime = False
+While d<k:
+if(k%d==0):
+isPrime = True
+d=d+1
+if(not(isPrime)):
+print(k)
+k=k+1
+13
+
+N = int(input())
+
+even = 0
+odd = 0
+while(N > 0):
+    rem = N % 10
+    N = N // 10
+    if (rem % 2 == 0):
+        even = even + rem
+    else:
+        odd = odd + rem
+print(even, " ", odd)
