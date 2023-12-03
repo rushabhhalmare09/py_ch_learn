@@ -2614,3 +2614,83 @@ while(N > 0):
     else:
         odd = odd + rem
 print(even, " ", odd)
+
+
+==========
+
+Creating a Local Variable
+We declare a local variable inside a function. Consider the given function definition:
+def foo():
+y = "Local Variable"
+print(y)
+foo()
+We get the output as:
+Local Variable
+Accessing A Local Variable Outside The Scope
+def foo():
+y = "local"
+foo()
+print(y)
+In the above code, we declared a local variable y inside the function foo(), and
+then we tried to access it from outside the function. We get the output as:
+NameError: name 'y' is not defined
+We get an error because the lifetime of a local variable is the function it is defined
+in. Outside the function, the variable does not exist and cannot be accessed. In
+other words, a variable cannot be accessed outside its scope.
+7
+Global Variable And Local Variable With The Same Name
+Consider the code given:
+x = 5
+def foo():
+x = 10
+print("Local:", x)
+foo()
+print("Global:", x)
+In this, we have declared a global variable x = 5 outside the function foo(). Now,
+inside the function foo(), we re-declared a local variable with the same name, x.
+Now, we try to print the values of x, inside, and outside the function. We observe
+the following output:
+Local: 10
+Global: 5
+In the above code, we used the same name x for both global and local variables.
+We get a different result when we print the value of x because the variables have
+been declared in different scopes, i.e. the local scope inside foo() and global scope
+outside foo().
+When we print the value of the variable inside foo() it outputs Local: 10. This is
+called the local scope of the variable. In the local scope, it prints the value that it has
+been assigned inside the function.
+Similarly, when we print the variable outside foo(), it outputs global Global: 5.
+This is called the global scope of the variable and the value of the global variable x
+is printed.
+8
+Python Default Parameters
+Function parameters can have default values in Python. We can provide a default
+value to a parameter by using the assignment operator (=). Here is an example.
+def wish(name, wish="Happy Birthday"):
+"""This function wishes the person with the provided message. If the
+message is not provided, it defaults to "Happy Birthday" """
+print("Hello", name + ', ' + wish)
+greet("Rohan")
+greet("Hardik", "Happy New Year")
+Output
+Hello Rohan, Happy Birthday
+Hello Hardik, Happy New Year
+In this function, the parameter name does not have a default value and is required
+(mandatory) during a call.
+On the other hand, the parameter wish has a default value of "Happy Birthday".
+So, it is optional during a call. If an argument is passed corresponding to the
+parameter, it will overwrite the default value, otherwise it will use the default value.
+Important Points to be kept in mind while using default parameters:
+● Any number of parameters in a function can have a default value.
+● The conventional syntax for using default parameters states that once we
+have passed a default parameter, all the parameters to its right must also
+have default values.
+● In other words, non-default parameters cannot follow default parameters.
+9
+For example, if we had defined the function header as:
+def wish(wish = "Happy Birthday", name):
+...
+We would get an error as:
+SyntaxError: non-default argument follows default argument
+Thus to summarise, in a function header, any parameter can have a default value
+unless all the parameters to its right have their default values.
