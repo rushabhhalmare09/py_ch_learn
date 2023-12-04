@@ -2694,3 +2694,79 @@ We would get an error as:
 SyntaxError: non-default argument follows default argument
 Thus to summarise, in a function header, any parameter can have a default value
 unless all the parameters to its right have their default values.
+
+
+=======
+
+Lists
+Introduction
+A list is a standard data type of Python that can store a sequence of values
+belonging to any type. The Lists are contained within square brackets ( [ ] ).
+Following are some examples of lists in Python:
+[ ] #Empty list
+[1, 2, 3] #List of integers
+[1, 2, 5.6, 9.8] #List of numbers (Floating point and Integers)
+['a', 'b', 'c'] #List of characters
+['a', 1, 4.3, "Zero"] #List of mixed data types
+["One", "Two", "Three"] #List of strings
+Creating Lists
+In Python programming, a list is created by placing all the items (elements) inside
+square brackets [ ], separated by commas.
+It can have any number of items and they may be of different types (integer, float,
+string etc.).
+list1 = [] #Empty list
+list2 = [1, 2, 3] #List of integers
+list3 = [1, "One", 3.4] #List with mixed data types
+A list can also have another list as an element. Such a list is called a Nested List.
+list4 = ["One", [8, 4, 6], ['Three']] #Nested List
+1
+Operations On Lists
+Accessing Elements in a List
+List indices start at 0 and go on till 1 less than the length of the list. We can use the
+index operator [ ] to access a particular item in a list. Eg.
+Index: 0 1 2 3 4
+1 10 34 23 90
+Note: Trying to access indexes out of the range (0 ,lengthOfList-1), will raise an
+IndexError. Also, the index must be an integer. We can't use float or other types,
+this will result in TypeError.
+Let us take an example to understand how to access elements in a list:
+l1 = ['Mother', 'Father', 'Daughter', 10, 23]
+>> print(l1[0]) #Output: 'Mother'
+>> print(l1[2]) #Output: 'Daughter'
+>> print(l1[4]) #Output: 23
+Negative Indexing
+Python allows negative indexing for its sequences. The index of -1 refers to the last
+item, -2 to the second last item, and so on. The negative indexing starts from the
+last element in the list.
+2
+Positive Indexing: 0 1 2 3 4 →
+1 10 34 23 90
+Negative Indexing: -5 -4 -3 -2 -1 ←
+Let us take an example to understand how to access elements using negative
+indexing in a list:
+l1 = ['Mother', 'Father', 'Daughter', 10, 23]
+>> print(l1[-1]) #Output: 23
+>> print(l1[-2]) #Output: 10
+>> print(l1[-6]) #Output: IndexOutOfRange error
+Changing Elements of a List
+Once a list is created, we can even change the elements of the list. This is done by
+using the assignment operator (=) to change the value at a particular list index. This
+can be done as follows:
+l1 = ['Mother', 'Father', 'Daughter', 10, 23]
+l1[-1] = "Daughter" #Changing the last element to "Daughter"
+L1[3] = 12 #Changing the element at index 3 to 12
+print(l1)
+Output:
+['Mother', 'Father', 'Daughter', 12, "Daughter"]
+Concatenation of Lists
+Joining or concatenating two list in Python is very easy. The concatenation operator (+), can
+be used to join two lists. Consider the example given below:
+l1= [1,2,3] #First List
+l2= [3,4,5] #Second List
+3
+l3= l1+l2 #Concatenating both to get a new list
+print(l3)
+Output:
+[1,2,3,3,4,5]
+Note: The + operator when used with lists requires that both the operands are of
+list types. You cannot add a number or any other value to a list.
