@@ -2770,3 +2770,60 @@ Output:
 [1,2,3,3,4,5]
 Note: The + operator when used with lists requires that both the operands are of
 list types. You cannot add a number or any other value to a list.
+
+==================
+
+Repeating/Replicating Lists
+Like strings, you can use * operator to replicate a list specified number of times.
+Consider the example given below:
+>>> l1 = [1,2, 10, 23]
+>>> print(li*3)
+[1,2,10,23,1,2,10,23,1,2,10,23] #Output
+Notice that the above output has the same list l1 repeated 3 times within a single
+list.
+List Slicing
+List slicing refers to accessing a specific portion or a subset of a list while the
+original list remains unaffected. You can use indexes of list elements to create list
+slices as per the following syntax:
+slice= <List Name>[StartIndex : StopIndex : Steps]
+● The StartIndex represents the index from where the list slicing is supposed
+to begin. Its default value is 0, i.e. the list begins from index 0 if no
+StartIndex is specified.
+● The StopIndex represents the last index up to which the list slicing will go on.
+4
+Its default value is (length(list)-1) or the index of the last element in the
+list.
+● steps represent the number of steps. It is an optional parameter. steps, if
+defined, specifies the number of elements to jump over while counting from
+StartIndex to StopIndex. By default, it is 1.
+● The list slices created, include elements falling between the indexes
+StartIndex and StopIndex, including StartIndex and not including
+StopIndex.
+Here is a basic example of list slicing.
+L = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+print(L[2:7])
+As, you can see from the figure given above, we get the output as:
+['c', 'd', 'e', 'f', 'g']
+Slice Using Negative Indices
+You can also specify negative indices while slicing a list. Consider the example given
+5
+below.
+L = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+print(L[-7:-2])
+Thus, we get the output as:
+['c', 'd', 'e', 'f', 'g]
+Specify Step of the Slicing
+You can specify the step of the slicing using the steps parameter. The steps
+parameter is optional and by default 1.
+# Print every 2nd item between position 2 to 7
+L = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+print(L[2:7:2])
+6
+The output will be:
+['c','e','g']
+You can even specify a negative step size:
+# Print every 2nd item between position 6 to 1
+L = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+print(L[6:1:-2])
+The output will be:
+['g','e','c']
