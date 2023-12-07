@@ -2827,3 +2827,60 @@ L = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
 print(L[6:1:-2])
 The output will be:
 ['g','e','c']
+
+
+============
+
+Slice at Beginning & End
+Omitting the StartIndex starts the slice from the index 0. Meaning, L[:stop] is
+equivalent to L[0:stop].
+# Slice the first three items from the list
+L = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+print(L[:3])
+Output
+['a', 'b', 'c']
+7
+Whereas, omitting the StopIndex extends the slice to the end of the list. Meaning,
+L[start:] is equivalent to L[start:len(L)].
+# Slice the last three items from the list
+L = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+print(L[6:])
+Output
+['g', 'h', 'i']
+Reversing a List
+You can reverse a list by omitting both StartIndex and StopIndex and specifying
+steps as -1.
+L = ['a', 'b', 'c', 'd', 'e']
+print(L[::-1])
+Output:
+['e', 'd', 'c', 'b', 'a'] #Reversed List
+List Methods
+append(): Used for appending/adding elements at the end of a list.
+Syntax: <ListName>.append(element)
+Example:
+>>> li=[1,2,3,4]
+>>> li.append(5) #Append 5 to the end of the list
+>>> li
+[1,2,3,4,5]
+8
+extend(): Adds the contents of List2 to the end of List1.
+Syntax: <ListName1>.extend(<ListName2)
+Example:
+>>> l1=[1,2,3,4]
+>>> l2=[5,6,7,8]
+>>> l1.extend(l2) #Adds contents of l2 to l1 at the end
+>>> l1
+[1,2,3,4,5,6,7,8]
+**.append() vs .extend():
+The only difference between .append() and .extend() is that, the .append()
+method adds an element at the back of a given list (appends an element at the end of
+a list). On the other hand, the .extend() method adds the contents of another list
+at the end of the given list i.e. it merges two lists (extends the given list). See the
+examples given above for better clarity.
+insert(): Inserts an element at a specified position/index in a list.
+Syntax: <ListName>(position, element)
+Example:
+>>> li=[1,2,3,4]
+>>> li.insert(2,5) #Insert 5 at the index no. 2
+>>> li
+[1,2,5,3,4]
