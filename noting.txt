@@ -2884,3 +2884,100 @@ Example:
 >>> li.insert(2,5) #Insert 5 at the index no. 2
 >>> li
 [1,2,5,3,4]
+
+
+================
+
+sum() : Returns the sum of all the elements of a List. (Used only for lists containing
+numerical values)
+Syntax: sum(<ListName>)
+Example:
+>>> l1=[1,2,3,4]
+>>> sum1= sum(l1) #Finds the sum of all elements in l1
+>>> sum1
+10
+count(): Returns the total number of times a given element occurs in a List.
+Syntax: <ListName>.count(element)
+Example:
+>>> l1=[1,2,3,4,4,3,5,4,4,2]
+>>> c= l1.count(4) #Number of times 4 occurs in the list
+>>> c
+4
+len(): Returns the total length of a List.
+Syntax: len(<ListName>)
+Example:
+>>> l1=[1,2,3,4,5]
+>>> len(l1)
+5
+10
+index(): Returns the index of first occurrence of an element in a list. If element is
+not present, it returns -1.
+Syntax: <ListName>.index(element)
+Example:
+>>> l1=[1,2,3,4]
+>>> l1.index(3)
+2
+min() : Returns the minimum element in a List.
+Syntax: min(<ListName>)
+Example:
+>>> l1=[1,2,3,4]
+>>> min(l1)
+1
+max(): Returns the maximum element in a List.
+Syntax: max(<ListName>)
+Example:
+>>> l1=[1,2,3,4]
+>>> max(l1)
+4
+pop(): It deletes and returns the element at the specified index. If we don't mention
+the index, it by default pops the last element in the list.
+Syntax: <ListName>.pop([index])
+Example:
+>>> l1=[1,2,3,4]
+11
+>>> poppedElement= l1.pop(2)
+>>> poppedElement #Element popped
+3
+>>> l1 #List after popping the element
+[1,2,4]
+Note: Index must be in range of the List, otherwise IndexError occurs.
+del() : Element to be deleted is mentioned using list name and index.
+Syntax: del <ListName>[index]
+Example:
+>>> l1=[1,1,12,3]
+>>> del l1[2]
+>>> l1
+[1,1,3]
+remove(): Element to be deleted is mentioned using list name and element.
+Syntax: <ListName>.remove(element)
+Example:
+>>> l1=[1,1,12,3]
+>>> l1.remove(12)
+>>> l1
+[1,1,3]
+Looping On Lists
+There are multiple ways to iterate over a list in Python.
+Using for loop
+12
+li = [1, 3, 5, 7, 9]
+# Using for loop
+for i in li:
+print(i) #Print the element in the list
+Output:
+1
+3
+5
+7
+9
+Using for loop and range()
+list = [1, 3, 5, 7, 9]
+length = len(list) #Getting the length of the list
+for i in range(length): #Iterations from 0 to (length-1)
+print(i)
+Output:
+1
+3
+5
+7
+9
+You can even use while() loops. Try using the while() loops on your own.
