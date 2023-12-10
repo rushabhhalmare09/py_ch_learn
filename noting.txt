@@ -2981,3 +2981,54 @@ Output:
 7
 9
 You can even use while() loops. Try using the while() loops on your own.
+======
+
+Taking Lists as User Inputs
+There are two common ways to take lists as user inputs. These are:
+● Space Separated Input of Lists
+● Line Separated Input of Lists
+Line Separated Input Of List
+The way to take line separated input of a list is described below:
+● Create an empty list.
+● Let the number of elements you wish to put in the list be N.
+● Run a loop for N iterations and during these N iterations do the following:
+○ Take an element as user input using the input() function.
+○ Append this element to the list we created.
+● At the end of N iterations, you would have appended N desired elements to
+your list.
+● In this, different elements will have to be entered by the user in different
+lines.
+Consider the given example:
+li=[] #Create empty list
+for i in range(5): #Run the loop 5 times
+a=int(input()) #Take user input
+li.append(a) #Append it to the list
+14
+print(li) #Print the list
+The above code will prompt the user to input 5 integers in 5 lines. These 5 integers
+will be appended to a list and the list will be printed.
+Space Separated Input Of List
+in Python, a user can take multiple values or inputs in one line by two methods.
+● Using split() method
+● Using List comprehension
+Using split() method
+This function helps in taking multiple inputs from the user in a single line . It breaks
+the given input by the specified separator. If a separator is not provided then any
+white space is treated as a separator.
+Note: The split() method is generally used to split a string.
+Syntax :
+input().split(<separator>) #<separator> is optional
+Example :
+In[]: a= input().split()
+In[]: print(a)
+User[]: 1 2 3 4 5 #User inputs the data (space separated input)
+Out[]: ['1','2','3','4','5']
+Now, say you want to take comma separated inputs, then you will use "," as the
+separator. This will be done as follows:
+In[]: a= input().split(",")
+In[]: print(a)
+15
+User[]: 1,2,3,4,5 #User inputs the data (space separated input)
+Out[]: ['1','2','3','4','5']
+Note: Observe that the elements were considered as characters and not integers in
+the list created using the split() function. (What if you want a list of integers?- Think)
