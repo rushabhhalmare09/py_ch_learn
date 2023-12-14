@@ -3032,3 +3032,88 @@ User[]: 1,2,3,4,5 #User inputs the data (space separated input)
 Out[]: ['1','2','3','4','5']
 Note: Observe that the elements were considered as characters and not integers in
 the list created using the split() function. (What if you want a list of integers?- Think)
+
+
+=======
+
+Using List Comprehension
+List comprehension is an elegant way to define and create a list in Python. We can
+create lists just like mathematical statements in one line only.
+A common syntax to take input using list comprehension is given below.
+inputList= [int(x) for x in input().split()]
+Example :
+In[1]: li= [int(x) for x in input().split()]
+In[2]: print(li)
+User[]: 1 2 3 4 5 #User inputs the data (space separated input)
+Out[]: [1,2,3,4,5] #List has integers
+Here, In[1] typecasts x in the list input().split() to an integer and then makes
+a list out of all these x’s.
+Linear Search
+Linear search is the simplest searching algorithm that searches for an element in a
+list in sequential order.
+16
+Linear Search Algorithm
+We have been given a list and a targetValue. We aim to check whether the given
+targetValue is present in the given list or not. If the element is present we are
+required to print the index of the element in the list and if the element is not
+present we print -1.
+(First, let us implement this using a simple loop, then later we will see how to implement
+linear search using functions.)
+The following are the steps in the algorithm:
+1. Traverse the given list using a loop.
+2. In every iteration, compare the targetValue with the value of the element in
+the list in the current iteration.
+○ If the values match, print the current index of the list.
+○ If the values do not match, move on to the next list element.
+3. If no match is found, print -1.
+Pseudo-Code
+for each element in the array:#For loop to traverse the list
+if element == targetValue #Compare the targetValue to the element
+print(indexOf(item))
+Python Code
+li= [int(x) for x in input().split()] #Taking list as user input
+targetValue= int(input()) #User input for targetValue
+17
+found = False #Boolean value to check if we found the targetValue
+for i in li:
+if (i==targetValue): #If we found the targetValue
+print(li.index(i)) #Print the index
+found = True #Set found as True as we found the targetValue
+break #Since we found the targetValue, we break out of loop
+if found is False:#If we did not find the targetValue
+print(-1)
+We have:
+User[1]: 1 2 4 67 23 12 #User input for list
+User[2]: 4 #User input= targetValue
+Out[]: 2 #Index of 4
+Linear Search Through Functions
+We will create a function linearSearch, which will have the following properties:
+● Take list and targetValue as parameters.
+● Run a loop to check the presence of targetValue in list.
+● If it is present then it returns the index of the targetValue.
+● If it is not present, then it returns -1.
+We will call this function and then print the return value of the function.
+Python Code
+def linearSearch(li,targetValue):
+18
+for i in li:
+if (i==targetValue): #If we found the targetValue
+return li.index(i) #Return the index
+return -1 #If not found, return -1
+li= [int(x) for x in input().split()] #Taking list as user input
+targetValue= int(input()) #User input for targetValue
+print(linearSearch(li,targetValue)) #Print the return value
+Mutable And Immutable Concept
+The Python data types can be broadly categorized into two - Mutable and
+Immutable types. Let us now discuss these two types in detail.
+● Since everything in Python is an Object, every variable holds an object
+instance.
+● When an object is initiated, it is assigned a unique object id (Address in the
+memory).
+● Its type is defined at runtime and once set it can never change.
+● However, its state can be changed if it is mutable. In other words, the value
+of a mutable object can be changed after it is created, whereas the value of
+an immutable object can’t be changed.
+Note: Objects of built-in types like (int, float, bool, str, tuple, Unicode) are immutable.
+Objects of built-in types like (list, set, dict) are mutable. A list is a mutable as we can
+insert/delete/reassign values in a list.
