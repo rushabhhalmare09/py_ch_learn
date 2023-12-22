@@ -3224,3 +3224,72 @@ while t > 0 :
     print(pairSum(arr, n, x))
 
     t -= 1
+---------===========-------------
+
+Searching And Sorting
+Searching
+Searching means to find out whether a particular element is present in a given sequence or
+not. There are commonly two types of searching techniques:
+● Linear search (We have studied about this in Arrays and Lists)
+● Binary search
+In this module, we will be discussing binary search.
+Binary Search
+Binary Search is a searching algorithm for finding an element's position in a sorted array. In
+a nutshell, this search algorithm takes advantage of a collection of elements of being
+already sorted by ignoring half of the elements after just one comparison.
+Prerequisite: Binary search has one pre-requisite; unlike the linear search where elements
+could be any order, the array in binary search must be sorted,
+The algorithm works as follows:
+1. Let the element we are searching for, in the given array/list is X.
+2. Compare X with the middle element in the array.
+3. If X matches with the middle element, we return the middle index.
+4. If X is greater than the middle element, then X can only lie in the right (greater)
+half subarray after the middle element, then we apply the algorithm again for
+the right half.
+5. If X is smaller than the middle element, then X must lie in the left (lower) half,
+this is because the array is sorted. So we apply the algorithm for the left half.
+1
+Example Run
+● Let us consider the array to be:
+● Let x = 4 be the element to be searched.
+● Set two pointers low and high at the first and the last element respectively.
+● Find the middle element mid of the array ie. arr[(low+high)/2] = 6.
+● If x == mid, then return mid. Else, compare the element to be searched with m.
+● If x > mid, compare x with the middle element of the elements on the right side of
+mid. This is done by setting low to low = mid + 1.
+● Else, compare x with the middle element of the elements on the left side of mid.
+This is done by setting high to high = mid - 1.
+● Repeat these steps until low meets high. We found 4:
+2
+Python Code
+We will get the output of the above code as:
+Advantages of Binary search:
+● This searching technique is faster and easier to implement.
+● Requires no extra space.
+● Reduces the time complexity of the program to a greater extent. (The term time
+complexity might be new to you, you will get to understand this when you will be
+studying algorithmic analysis. For now, just consider it as the time taken by a
+particular algorithm in its execution, and time complexity is determined by the
+3
+#Function to implement Binary Search Algorithm
+def binarySearch(array, x, low, high):
+ #Repeat until the pointers low and high meet each other
+ while low <= high:
+ mid = low + (high - low) #Middle Index
+ if array[mid] == x: #Element Found
+ return mid
+ elif array[mid] < x: #x is on the right side
+ low = mid + 1
+ else: #x is on the left side
+ high = mid - 1
+ return -1 #Element is not found
+array = [3, 4, 5, 6, 7, 8, 9]
+x = 4
+result = binarySearch(array, x, 0, len(array)-1)
+if result != -1: #If element is found
+ print("Element is present at index " + str(result))
+else: #If element is not found
+ print("Not found")
+Element is present at index 1
+number of operations that are performed by that algorithm i.e. time complexity is
+directly proportional to the number of operations in the program).
