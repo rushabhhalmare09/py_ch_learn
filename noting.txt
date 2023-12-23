@@ -3293,3 +3293,72 @@ else: #If element is not found
 Element is present at index 1
 number of operations that are performed by that algorithm i.e. time complexity is
 directly proportional to the number of operations in the program).
+
+
+============
+
+Sorting
+Sorting is a permutation of a list of elements of such that the elements are either in
+increasing (ascending) order or decreasing (descending) order.
+There are many different sorting techniques. The major difference is the amount of space
+and time they consume while being performed in the program.
+For now, we will be discussing the following sorting techniques:
+● Selection sort
+● Bubble sort
+● Insertion sort
+Let us now discuss these sorting techniques in detail.
+Selection Sort
+Selection sort is an algorithm that selects the smallest element from an unsorted list in
+each iteration and places that element at the beginning of the unsorted list. The detailed
+algorithm is given below.
+● Consider the given unsorted array to be:
+● Set the first element as minimum.
+● Compare minimum with the second element. If the second element is smaller than
+minimum, assign the second element as minimum.
+● Compare minimum with the third element. Again, if the third element is smaller, then
+assign minimum to the third element otherwise do nothing. The process goes on until
+the last element.
+4
+● After each iteration, minimum is placed in the front of the unsorted list.
+● For each iteration, indexing starts from the first unsorted element. These steps are
+repeated until all the elements are placed at their correct positions.
+First Iteration
+5
+Second Iteration:
+Third Iteration
+6
+Fourth Iteration
+Python Code
+We will get the output of the above code as:
+7
+# Selection sort in Python
+def selectionSort(arr, size):
+for step in range(size):
+minimum = step
+for i in range(step + 1, size):
+# to sort in descending order, change > to < in this line
+# select the minimum element in each loop
+if arr[i] < arr[minimum]:
+minimum = i
+# Swap
+(arr[step], arr[minimum]) = (arr[minimum], arr[step])
+input = [20, 12, 10, 15, 2]
+size = len(input)
+selectionSort(input, size)
+print('Sorted Array in Ascending Order: ')
+print(input)
+Sorted Array in Ascending Order: [2, 10, 12, 15, 20]
+Bubble Sort
+Bubble sort is an algorithm that compares the adjacent elements and swaps their positions
+if they are not in the intended order. The order can be ascending or descending.
+How does Bubble Sort work?
+● Starting from the first index, compare the first and the second elements. If the first
+element is greater than the second element, they are swapped.
+● Now, compare the second and third elements. Swap them if they are not in order.
+● The above process goes on until the last element.
+● The same process goes on for the remaining iterations. After each iteration, the
+largest element among the unsorted elements is placed at the end.
+● In each iteration, the comparison takes place up to the last unsorted element.
+● The array is sorted when all the unsorted elements are placed at their correct
+positions.
+Let the array be [-2, 45, 0, 11, -9].
